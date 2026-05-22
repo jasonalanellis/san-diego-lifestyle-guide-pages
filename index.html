@@ -353,8 +353,9 @@
 <article class="page-card"><h2><a href="/best-move-out-cleaning-san-diego.html">Best Move-Out Cleaning Services in San Diego (2025)</a></h2><p class="snippet">Moving out of your San Diego rental? A professional move-out cleaning can help you recover your security deposit and make a smooth transition to your next home.</p><a href="/best-move-out-cleaning-san-diego.html" class="read-more">Read more →</a></article>
 <article class="page-card"><h2><a href="/best-post-construction-cleaning-san-diego.html">Best Post-Construction Cleaning Services in San Diego (2025)</a></h2><p class="snippet">Renovation complete? New build finished? Post-construction cleaning requires specialized skills and equipment to make your space truly move-in ready. Here are San Diego's top services.</p><a href="/best-post-construction-cleaning-san-diego.html" class="read-more">Read more →</a></article>
 <article class="page-card"><h2><a href="/best-deep-cleaning-la-jolla-ca.html">Best Deep Cleaning Services in La Jolla, CA (2025)</a></h2><p class="snippet">La Jolla's stunning oceanfront homes and upscale properties deserve exceptional cleaning care. When you need more than regular maintenance, these deep cleaning services deliver premium results.</p><a href="/best-deep-cleaning-la-jolla-ca.html" class="read-more">Read more →</a></article>
+<article class="page-card"><h2><a href="/best-family-activities-san-diego.html">Best Family Activities in San Diego (2025)</a></h2><p class="snippet">San Diego is one of the country's great family destinations — world-class wildlife parks, beaches built for all ages, and enough indoor attractions to fill a rainy week. Here's where to take the kids in 2025.</p><a href="/best-family-activities-san-diego.html" class="read-more">Read more →</a></article>
+<article class="page-card"><h2><a href="/best-neighborhoods-san-diego.html">Best Neighborhoods in San Diego (2025)</a></h2><p class="snippet">San Diego is less a single city than a collection of distinct neighborhoods — each with its own character, dining scene, and sense of place. Whether you're relocating or just exploring, here's where to look.</p><a href="/best-neighborhoods-san-diego.html" class="read-more">Read more →</a></article>
 </div>
-<div id="newsletter-posts"></div>
       </article>
 
       
@@ -369,7 +370,7 @@
         <div class="footer-brand">San Diego Lifestyle Guide</div>
         <div>© 2025 San Diego Lifestyle Guide. All rights reserved.</div>
         <div style="margin-top:0.5rem">
-          <a href="mailto:sandiegolifestyleguide@proton.me">sandiegolifestyleguide@proton.me</a>
+          <a href="mailto:sdlifestyle@proton.me">sdlifestyle@proton.me</a>
         </div>
       </div>
       <div class="newsletter-cta">
@@ -381,58 +382,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    (function() {
-      var PUB_ID = 'pub_fd26500b-8b4f-4293-a33a-fae175bc3065';
-      var PROXY = 'https://lss-app.vercel.app/api/beehiiv';
-      var SECTION_TITLE = 'Latest from the Newsletter';
-
-      function escapeHtml(s) {
-        return String(s).replace(/[&<>"']/g, function(c) {
-          return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
-        });
-      }
-
-      function loadPosts() {
-        fetch(PROXY + '?publication_id=' + PUB_ID + '&limit=12&status=published')
-          .then(function(res) { return res.ok ? res.json() : null; })
-          .then(function(json) {
-            if (!json) return;
-            var posts = (json.data || []).filter(function(p) { return p.web_url && p.title; });
-            if (!posts.length) return;
-
-            var container = document.getElementById('newsletter-posts');
-            if (!container) return;
-
-            var cards = posts.map(function(p) {
-              var date = '';
-              if (p.publish_date) {
-                date = new Date(p.publish_date * 1000).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-              }
-              var subtitle = p.subtitle || p.preview_text || '';
-              return '<article class="page-card">' +
-                '<h2><a href="' + p.web_url + '" target="_blank" rel="noopener">' + escapeHtml(p.title) + '</a></h2>' +
-                (subtitle ? '<p class="snippet">' + escapeHtml(subtitle) + '</p>' : '') +
-                (date ? '<p class="snippet" style="font-size:0.78rem;opacity:0.7;">' + date + '</p>' : '') +
-                '<a href="' + p.web_url + '" target="_blank" rel="noopener" class="read-more">Read more →</a>' +
-                '</article>';
-            }).join('');
-
-            container.innerHTML =
-              '<h2 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin: 3rem 0 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--color-secondary);">' + SECTION_TITLE + '</h2>' +
-              '<div class="page-listing">' + cards + '</div>';
-          })
-          .catch(function() { /* fail silently — do not break the page */ });
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadPosts);
-      } else {
-        loadPosts();
-      }
-    })();
-  </script>
 
 </body>
 </html>
