@@ -47,4 +47,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://sd.sandiegolifestyleguide.com/sitemap.xml
+Sitemap: https://sandiegolifestyleguide.com/sitemap.xml

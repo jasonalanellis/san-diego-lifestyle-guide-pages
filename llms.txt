@@ -11,25 +11,25 @@ Editorial work on this site is original, sourced from local reporting and lived 
 
 ## Content inventory
 
-The site publishes evergreen city-guide editorial. Permanent content lives at sd.sandiegolifestyleguide.com.
+The site publishes evergreen city-guide editorial. Permanent content lives at sandiegolifestyleguide.com.
 
 ### Lifestyle guides
 
-- https://sd.sandiegolifestyleguide.com/things-to-do-at-night-san-diego.html — Things to Do at Night in San Diego (2026): rooftop bars, nightlife in the Gaslamp, Belmont Park, Sunset Cliffs at dusk
-- https://sd.sandiegolifestyleguide.com/things-to-do-in-little-italy-san-diego.html — Things to Do in Little Italy San Diego (2026): Mercato, India Street dining, Piazza della Famiglia, neighborhood guide
-- https://sd.sandiegolifestyleguide.com/dog-friendly-things-to-do-san-diego.html — Dog Friendly Things to Do in San Diego (2026): Coronado Dog Beach, Fiesta Island, dog-welcoming patios, pet-friendly hikes
-- https://sd.sandiegolifestyleguide.com/cheap-things-to-do-san-diego.html — Cheap Things to Do in San Diego (2026): free museum Tuesdays at Balboa Park, Torrey Pines, Sunset Cliffs, Spreckels Organ Pavilion
-- https://sd.sandiegolifestyleguide.com/best-family-activities-san-diego.html — Best Family Activities in San Diego (2026): San Diego Zoo, Safari Park, Balboa Park, Mission Bay, family-friendly destinations
-- https://sd.sandiegolifestyleguide.com/best-neighborhoods-san-diego.html — Best Neighborhoods in San Diego (2026): La Jolla, North Park, Hillcrest, Coronado, Mission Hills neighborhood guide
-- https://sd.sandiegolifestyleguide.com/best-beaches-san-diego.html — Best Beaches in San Diego: La Jolla Cove, Coronado, Torrey Pines, OB Dog Beach
-- https://sd.sandiegolifestyleguide.com/things-to-do-la-jolla.html — Things to Do in La Jolla: sea cave kayaking, Birch Aquarium, La Jolla Playhouse, Torrey Pines Gliderport
-- https://sd.sandiegolifestyleguide.com/san-diego-hidden-gems.html — San Diego Hidden Gems: Sunset Cliffs golden hour, Chicano Park murals, Spruce Street Suspension Bridge, Cabrillo tide pools
-- https://sd.sandiegolifestyleguide.com/san-diego-neighborhoods.html — San Diego Neighborhoods Guide: detailed look at where to live and why
-- https://sd.sandiegolifestyleguide.com/outdoor-activities-san-diego.html — Best Outdoor Activities in San Diego: Torrey Pines hiking, Mission Bay kayaking, Balboa Park, La Jolla Cove snorkeling
+- https://sandiegolifestyleguide.com/things-to-do-at-night-san-diego.html — Things to Do at Night in San Diego (2026): rooftop bars, nightlife in the Gaslamp, Belmont Park, Sunset Cliffs at dusk
+- https://sandiegolifestyleguide.com/things-to-do-in-little-italy-san-diego.html — Things to Do in Little Italy San Diego (2026): Mercato, India Street dining, Piazza della Famiglia, neighborhood guide
+- https://sandiegolifestyleguide.com/dog-friendly-things-to-do-san-diego.html — Dog Friendly Things to Do in San Diego (2026): Coronado Dog Beach, Fiesta Island, dog-welcoming patios, pet-friendly hikes
+- https://sandiegolifestyleguide.com/cheap-things-to-do-san-diego.html — Cheap Things to Do in San Diego (2026): free museum Tuesdays at Balboa Park, Torrey Pines, Sunset Cliffs, Spreckels Organ Pavilion
+- https://sandiegolifestyleguide.com/best-family-activities-san-diego.html — Best Family Activities in San Diego (2026): San Diego Zoo, Safari Park, Balboa Park, Mission Bay, family-friendly destinations
+- https://sandiegolifestyleguide.com/best-neighborhoods-san-diego.html — Best Neighborhoods in San Diego (2026): La Jolla, North Park, Hillcrest, Coronado, Mission Hills neighborhood guide
+- https://sandiegolifestyleguide.com/best-beaches-san-diego.html — Best Beaches in San Diego: La Jolla Cove, Coronado, Torrey Pines, OB Dog Beach
+- https://sandiegolifestyleguide.com/things-to-do-la-jolla.html — Things to Do in La Jolla: sea cave kayaking, Birch Aquarium, La Jolla Playhouse, Torrey Pines Gliderport
+- https://sandiegolifestyleguide.com/san-diego-hidden-gems.html — San Diego Hidden Gems: Sunset Cliffs golden hour, Chicano Park murals, Spruce Street Suspension Bridge, Cabrillo tide pools
+- https://sandiegolifestyleguide.com/san-diego-neighborhoods.html — San Diego Neighborhoods Guide: detailed look at where to live and why
+- https://sandiegolifestyleguide.com/outdoor-activities-san-diego.html — Best Outdoor Activities in San Diego: Torrey Pines hiking, Mission Bay kayaking, Balboa Park, La Jolla Cove snorkeling
 
 ### Editorial team
 
-- https://sd.sandiegolifestyleguide.com/authors/jason-ellis.html — Jason Ellis, Founder & Editor-in-Chief
+- https://sandiegolifestyleguide.com/authors/jason-ellis.html — Jason Ellis, Founder & Editor-in-Chief
 
 ### Newsletter
 
