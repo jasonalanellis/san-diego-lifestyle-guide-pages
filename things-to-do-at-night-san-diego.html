@@ -11,8 +11,8 @@
   <meta property="og:title" content="Things to Do at Night in San Diego (2026)">
   <meta property="og:description" content="After-hours San Diego — rooftop bars, late-night bites, beach bonfires, downtown shows, and the quieter night-side of a city that earns its reputation afte">
   <meta property="og:site_name" content="San Diego Lifestyle Guide">
-  <meta property="og:url" content="https://sd.sandiegolifestyleguide.com/">
-  
+  <meta property="og:url" content="https://sd.sandiegolifestyleguide.com/things-to-do-at-night-san-diego.html">
+  <meta property="og:image" content="https://sd.sandiegolifestyleguide.com/og/things-to-do-at-night-san-diego.jpg">
 
   
   <meta name="twitter:card" content="summary_large_image">
@@ -28,309 +28,661 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================
-       CSS Custom Properties
-       ============================ */
+    /* ============================================================
+       Brand tokens — overridden by child template
+       ============================================================ */
     :root {
-      --color-primary:    #0077B6;  /* Ocean Blue */
-      --color-secondary:  #FF6B35;  /* Sunset Orange */
-      --color-accent:     #00B4D8;  /* Pacific Teal */
-      --color-bg:         #FAFAFA;
+      
+      /* SDLG — Ocean Blue, Sunset Orange, Pacific Teal */
+      --color-primary:    #0077B6;
+      --color-primary-700: #005A8A;
+      --color-primary-50:  #E6F4FB;
+      --color-secondary:  #FF6B35;
+      --color-secondary-700: #D14E1F;
+      --color-accent:     #00B4D8;
+      --color-accent-50:  #E0F7FC;
+      --color-paper:      #FAFAFA;
+      --color-ink:        #0A1929;
       --color-surface:    #FFFFFF;
       --color-text:       #1A1A1A;
       --color-text-muted: #6B7280;
       --color-border:     #E5E7EB;
+      --color-editor-pick-bg: #FFF4E6;
+
       --font-heading:     'Montserrat', sans-serif;
       --font-body:        'Open Sans', sans-serif;
-      --font-accent:      'Playfair Display', serif;
-      --max-width:        860px;
-      --radius:           8px;
+      --font-accent:      'Playfair Display', Georgia, serif;
+
+      /* SDLG = coastal feel — rounded soft corners */
+      --radius-card:      12px;
+      --radius-pill:      999px;
+
+      --max-width-article:  720px;
+      --max-width-sidebar:  280px;
+      --max-width-home:     1180px;
+      --max-width-hero:     1600px;
+
+      --eyebrow-color:     var(--color-secondary);
+      --eyebrow-letter-spacing: 0.14em;
+
+      /* Ocean-tinted hero scrim */
+      --hero-scrim:       linear-gradient(180deg, transparent 35%, rgba(10,42,69,0.72) 78%, rgba(10,25,41,0.92) 100%);
+
     }
 
-    /* ============================
-       Reset + Base
-       ============================ */
+    /* ============================================================
+       Reset
+       ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; }
     body {
-      background: var(--color-bg);
+      background: var(--color-paper);
       color: var(--color-text);
       font-family: var(--font-body);
+      font-size: 1.0625rem;
       line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: var(--color-primary); }
     a:hover { color: var(--color-secondary); }
 
-    /* ============================
-       Header / Nav
-       ============================ */
-    .site-header {
+    /* ============================================================
+       Scroll progress hairline
+       ============================================================ */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px;
+      width: 0%; background: var(--color-secondary);
+      z-index: 200; transition: width 0.06s linear;
+    }
+
+    /* ============================================================
+       Masthead
+       ============================================================ */
+    .masthead {
       background: var(--color-primary);
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      padding: 0.85rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      transition: padding 0.18s ease;
     }
-    .site-header .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+    body.masthead-mini .masthead { padding: 0.45rem 1.5rem; }
+    body.masthead-mini .masthead .tagline { display: none; }
+    .masthead .logo-wrap {
+      display: flex; align-items: center; gap: 0.75rem;
       text-decoration: none;
     }
-    .site-header .logo-img {
-      height: 40px;
-      width: auto;
+    .masthead .logo-img { height: 38px; width: auto; }
+    .masthead .brand-name {
+      color: #FFFFFF; font-family: var(--font-accent);
+      font-weight: 700; font-size: 1.15rem;
+      letter-spacing: 0.01em;
     }
-    .site-header .brand-name {
-      color: #FFFFFF;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.1rem;
-      letter-spacing: 0.02em;
-    }
-    .site-header .tagline {
-      color: rgba(255,255,255,0.75);
-      font-size: 0.78rem;
-      font-family: var(--font-body);
+    .masthead .tagline {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.78rem; font-family: var(--font-body);
       display: none;
+      font-style: italic;
     }
-    @media (min-width: 600px) {
-      .site-header .tagline { display: block; }
-    }
-    .site-header .header-cta a {
+    @media (min-width: 720px) { .masthead .tagline { display: block; } }
+    .masthead .header-cta a {
       background: var(--color-secondary);
-      color: #FFFFFF;
-      text-decoration: none;
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.8rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 4px;
-      transition: background 0.2s;
+      color: #FFFFFF; text-decoration: none;
+      font-family: var(--font-heading); font-weight: 600;
+      font-size: 0.78rem; padding: 0.45rem 0.95rem;
+      border-radius: 4px; transition: background 0.2s;
+      letter-spacing: 0.04em; text-transform: uppercase;
     }
-    .site-header .header-cta a:hover { background: #e05a28; }
+    .masthead .header-cta a:hover { background: var(--color-secondary-700); }
 
-    /* ============================
-       Page wrapper
-       ============================ */
-    .page-wrapper {
-      max-width: var(--max-width);
+    /* ============================================================
+       Article hero — full bleed
+       ============================================================ */
+    .article-hero {
+      position: relative;
+      width: 100%;
+      max-width: var(--max-width-hero);
       margin: 0 auto;
-      padding: 2rem 1.25rem;
+      overflow: hidden;
     }
-
-    /* ============================
-       Article meta line
-       ============================ */
-    .article-meta {
-      font-size: 0.82rem;
-      color: var(--color-text-muted);
-      margin-bottom: 2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .article-hero .hero-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--color-ink);
     }
-    .article-meta .date::before { content: "📅 "; }
-    .article-meta .read-time::before { content: "⏱ "; }
-
-    /* ============================
-       Content typography
-       ============================ */
-    .article-content h1 {
-      font-family: var(--font-accent);
-      font-size: 2rem;
-      line-height: 1.25;
-      color: var(--color-primary);
-      margin-bottom: 0.5rem;
+    .article-hero img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
     }
-    .article-content h2 {
+    .article-hero .hero-scrim {
+      position: absolute; inset: 0;
+      background: var(--hero-scrim);
+      pointer-events: none;
+    }
+    .article-hero .hero-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2rem 1.5rem 2.25rem;
+      color: #fff;
+      max-width: var(--max-width-home);
+      margin: 0 auto;
+    }
+    .article-hero .hero-eyebrow {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--color-primary);
-      margin: 2.5rem 0 0.75rem;
-      padding-bottom: 0.3rem;
+      font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 0.85rem;
+      display: inline-block;
+      padding-bottom: 0.2rem;
       border-bottom: 2px solid var(--color-secondary);
     }
-    .article-content h3 {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      margin: 1.75rem 0 0.5rem;
+    .article-hero h1.hero-h1 {
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: clamp(2rem, 5.5vw, 4rem);
+      line-height: 1.06;
+      color: #fff;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+      margin: 0 0 0.6rem;
+      max-width: 24ch;
     }
+    .article-hero .hero-deck {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+      line-height: 1.45;
+      color: rgba(255,255,255,0.92);
+      max-width: 56ch;
+    }
+    @media (min-width: 800px) {
+      .article-hero .hero-content { padding: 2.5rem 2rem 2.75rem; }
+    }
+
+    /* ============================================================
+       Article meta strip (below hero)
+       ============================================================ */
+    .meta-strip {
+      max-width: var(--max-width-home);
+      margin: 0.85rem auto 0;
+      padding: 0 1.5rem;
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 0.85rem;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.04em;
+    }
+    .meta-strip .meta-eyebrow {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      color: var(--eyebrow-color);
+    }
+    .meta-strip .dot { opacity: 0.5; }
+
+    /* ============================================================
+       Sticky TOC chip bar
+       ============================================================ */
+    .toc-chipbar {
+      position: sticky;
+      top: 64px;
+      background: rgba(250,250,250,0.94);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.55rem 1rem;
+      z-index: 80;
+      margin: 1.5rem auto 0;
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    body.masthead-mini .toc-chipbar { top: 48px; }
+    .toc-chipbar::-webkit-scrollbar { height: 4px; }
+    .toc-chipbar::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+    .toc-chip {
+      display: inline-block;
+      padding: 0.32rem 0.78rem;
+      margin-right: 0.4rem;
+      border-radius: var(--radius-pill);
+      background: #fff;
+      border: 1px solid var(--color-border);
+      font-family: var(--font-heading);
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .toc-chip:hover {
+      background: var(--color-paper);
+      color: var(--color-text);
+      border-color: var(--color-text-muted);
+    }
+    .toc-chip.active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+    .toc-chip-num {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--eyebrow-color);
+      margin-right: 0.3rem;
+    }
+    .toc-chip.active .toc-chip-num { color: rgba(255,255,255,0.92); }
+
+    /* ============================================================
+       Page wrapper
+       ============================================================ */
+    .page-wrapper {
+      max-width: var(--max-width-article);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    .page-wrapper.is-home {
+      max-width: var(--max-width-home);
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    /* ============================================================
+       Article content typography
+       ============================================================ */
+    .article-content { counter-reset: section; }
+    /* Hide the markdown H1 — it's already in the hero overlay */
+    .article-content > h1:first-child { display: none; }
+
+    .article-content h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      color: var(--color-primary);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.005em;
+    }
+
+    /* Numbered chip cards — H3 becomes a 2-col grid with big numeral on the left */
+    .article-content h3 {
+      counter-increment: section;
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      column-gap: 1.25rem;
+      align-items: baseline;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin: 3.25rem 0 0.85rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+      scroll-margin-top: 130px;
+    }
+    .article-content h3::before {
+      content: counter(section, decimal-leading-zero);
+      grid-column: 1;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 0.9;
+      color: var(--eyebrow-color);
+      align-self: start;
+    }
+    .article-content h3 > * { grid-column: 2; }
+    /* Ensure plain text content (no inner span) appears in column 2 */
+    .article-content h3 { padding-left: 0; }
+
     .article-content h4 {
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 1rem;
-      margin: 1.25rem 0 0.4rem;
+      font-size: 1.05rem;
+      color: var(--color-text);
+      margin: 1.5rem 0 0.4rem;
     }
-    .article-content p { margin-bottom: 1rem; }
+
+    .article-content p {
+      margin-bottom: 1.05rem;
+      font-size: 1.075rem;
+      line-height: 1.72;
+    }
+
+    /* Drop cap on the FIRST paragraph after the H2 (skip intro deck) — and also on the first paragraph overall (the intro), if it follows the hidden H1 */
+    .article-content > p:first-of-type::first-letter {
+      float: left;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 4.25rem;
+      line-height: 0.88;
+      padding: 0.4rem 0.65rem 0 0;
+      color: var(--color-primary);
+    }
+
+    /* Italic intro paragraph (the *subtitle* from markdown) — emphasized but distinct from body */
+    .article-content > p > em:only-child {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+    }
+
     .article-content ul, .article-content ol {
       margin: 0.75rem 0 1rem 1.5rem;
     }
     .article-content li { margin-bottom: 0.35rem; }
     .article-content strong { font-weight: 600; color: var(--color-text); }
-    .article-content em { font-style: italic; color: var(--color-text-muted); }
+    .article-content em { font-style: italic; }
+
+    /* Section break HR — refined editorial divider */
     .article-content hr {
       border: none;
-      border-top: 1px solid var(--color-border);
-      margin: 2rem 0;
+      height: 12px;
+      margin: 2.25rem auto;
+      max-width: 80px;
+      background: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'%3E%3Cpath d='M0,6 Q12.5,0 25,6 T50,6 T75,6 T100,6' fill='none' stroke='%2300B4D8' stroke-width='1.5'/%3E%3C/svg%3E") center/100% 100% no-repeat
+;
+      opacity: 0.7;
     }
-    .article-content blockquote {
-      border-left: 4px solid var(--color-secondary);
-      padding: 0.75rem 1rem;
-      margin: 1.5rem 0;
-      background: #FFF4F0;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      font-style: italic;
-    }
-    .article-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-    }
-    .article-content th {
-      background: var(--color-primary);
-      color: #fff;
-      font-family: var(--font-heading);
-      font-size: 0.9rem;
-      padding: 0.6rem 0.8rem;
-      text-align: left;
-    }
-    .article-content td {
-      padding: 0.5rem 0.8rem;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .article-content tr:nth-child(even) td { background: #F3F4F6; }
-    .article-content a { text-decoration: underline; }
 
-    /* ============================
-       Index page listing
-       ============================ */
-    .page-listing { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
-    .page-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: box-shadow 0.2s;
-    }
-    .page-card:hover { box-shadow: 0 4px 12px rgba(0,119,182,0.12); }
-    .page-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; border: none; padding: 0; }
-    .page-card h2 a { text-decoration: none; }
-    .page-card h2 a:hover { text-decoration: underline; }
-    .page-card .snippet { font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0.75rem; }
-    .page-card .read-more { font-size: 0.85rem; font-weight: 600; color: var(--color-secondary); text-decoration: none; }
-    .page-card .read-more:hover { text-decoration: underline; }
-
-    /* ============================
-       Featured Provider CTA aside
-       ============================ */
-    .featured-provider {
-      background: linear-gradient(135deg, var(--color-primary) 0%, #005f8a 100%);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
-      margin: 3rem 0 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .featured-provider .fp-label {
+    /* "Good for:" pill — publisher transforms `<p><strong>Good for:</strong> X</p>` into `<aside class="good-for-pill"><span>Good for</span> X</aside>` */
+    .good-for-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1.5rem;
+      padding: 0.45rem 0.95rem 0.45rem 0.55rem;
+      background: var(--color-accent-50);
+      border: 1px solid var(--color-accent);
+      border-radius: var(--radius-pill);
       font-family: var(--font-heading);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-    }
-    .featured-provider .fp-title {
-      font-family: var(--font-accent);
-      font-size: 1.4rem;
+      font-size: 0.8rem;
+      color: var(--color-text);
       line-height: 1.3;
     }
-    .featured-provider .fp-body {
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-    .featured-provider .fp-cta a {
+    .good-for-pill span {
       display: inline-block;
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.68rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-pill);
+    }
+
+    /* Blockquote — pull-quote treatment */
+    .article-content blockquote, .pull-quote {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      line-height: 1.4;
+      color: var(--color-text);
+      text-align: center;
+      max-width: 56ch;
+      margin: 3rem auto;
+      padding: 1.85rem 1.5rem;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+    
+    .pull-quote::before, .pull-quote::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 2px;
       background: var(--color-secondary);
-      color: #FFFFFF;
+      margin: 0 auto 0.95rem;
+    }
+    .pull-quote::after { margin: 0.95rem auto 0; }
+    
+
+    .article-content a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+    /* ============================================================
+       Quiet editorial partner endorsement — replaces gradient ad blob
+       ============================================================ */
+    .local-rec {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 2.5rem 1rem;
+      margin: 4rem auto 2rem;
+      text-align: center;
+      max-width: var(--max-width-article);
+    }
+    .lr-label {
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background 0.2s;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.1rem;
     }
-    .featured-provider .fp-cta a:hover { background: #e05a28; }
+    .lr-quote {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.35rem;
+      line-height: 1.45;
+      color: var(--color-text);
+      max-width: 48ch;
+      margin: 0 auto 1.15rem;
+    }
+    .lr-link {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--color-secondary);
+      padding-bottom: 3px;
+      transition: color 0.15s;
+    }
+    .lr-link:hover { color: var(--color-secondary); }
 
-    /* ============================
+    /* ============================================================
+       Home page — asymmetric magazine grid + image cards
+       ============================================================ */
+    .home-eyebrow {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--color-text-muted);
+      text-align: center;
+      margin: 1.5rem 0 1rem;
+    }
+    .home-tagline {
+      font-family: var(--font-accent);
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+      line-height: 1.35;
+      color: var(--color-text);
+      text-align: center;
+      max-width: 36ch;
+      margin: 0 auto 2.5rem;
+    }
+    .magazine-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 720px) {
+      .magazine-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+    }
+    @media (min-width: 1080px) {
+      .magazine-grid {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+      }
+      .magazine-grid .card-lead { grid-column: span 8; grid-row: span 2; }
+      .magazine-grid .card-wide { grid-column: span 12; }
+      .magazine-grid .card-support { grid-column: span 4; }
+    }
+    .page-card {
+      display: block;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--color-text);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+    }
+    .page-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+    }
+    .page-card .card-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--color-primary);
+      overflow: hidden;
+    }
+    .page-card.card-lead .card-img-wrap { aspect-ratio: 16 / 10; }
+    .page-card.card-wide .card-img-wrap { aspect-ratio: 21 / 9; }
+    .page-card.card-support .card-img-wrap { aspect-ratio: 4 / 3; }
+    .page-card .card-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .page-card:hover .card-img-wrap img { transform: scale(1.04); }
+    .page-card .card-body {
+      padding: 1.35rem 1.4rem 1.5rem;
+    }
+    .page-card.card-lead .card-body { padding: 1.6rem 1.75rem 1.85rem; }
+    .page-card .card-eyebrow {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      text-transform: uppercase;
+      color: var(--eyebrow-color);
+      margin-bottom: 0.55rem;
+    }
+    .page-card h2 {
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 1.35rem;
+      line-height: 1.22;
+      color: var(--color-text);
+      margin-bottom: 0.55rem;
+    }
+    .page-card.card-lead h2 { font-size: 1.85rem; }
+    .page-card.card-wide h2 { font-size: 1.55rem; }
+    .page-card .snippet {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+    .page-card.card-lead .snippet { font-size: 1rem; }
+
+    /* ============================================================
        Footer
-       ============================ */
+       ============================================================ */
     .site-footer {
       background: var(--color-primary);
-      color: rgba(255,255,255,0.75);
-      padding: 2rem 1.25rem;
-      margin-top: 4rem;
-      font-size: 0.85rem;
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 1.5rem 2rem;
+      margin-top: 5rem;
+      font-size: 0.88rem;
     }
     .site-footer .footer-inner {
-      max-width: var(--max-width);
+      max-width: var(--max-width-home);
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 1.5rem;
-      justify-content: space-between;
-      align-items: flex-start;
+      align-items: start;
+    }
+    @media (min-width: 720px) {
+      .site-footer .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     }
     .site-footer .footer-brand {
-      font-family: var(--font-heading);
+      font-family: var(--font-accent);
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.15rem;
       color: #FFFFFF;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
     }
-    .site-footer a { color: var(--color-accent); text-decoration: none; }
-    .site-footer a:hover { text-decoration: underline; }
-    .site-footer .newsletter-cta {
-      font-style: italic;
-      font-size: 0.82rem;
+    .site-footer a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+    .site-footer a:hover { border-bottom-color: var(--color-secondary); }
+    .site-footer .newsletter-block { font-size: 0.92rem; }
+    .site-footer .newsletter-block strong { color: #fff; font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+
+    /* ============================================================
+       Mobile polish
+       ============================================================ */
+    @media (max-width: 600px) {
+      html { font-size: 17px; }
+      body { line-height: 1.65; }
+      .page-wrapper { padding: 1.25rem 1rem 2rem; max-width: 100%; }
+      .masthead { padding: 0.65rem 1rem; }
+      .masthead .brand-name { font-size: 1rem; }
+      .toc-chipbar { top: 56px; padding: 0.4rem 0.75rem; }
+      .article-hero .hero-img-wrap { aspect-ratio: 4 / 5; }
+      .article-hero .hero-content { padding: 1.5rem 1.15rem 1.65rem; }
+      .article-content > p:first-of-type::first-letter { font-size: 3.3rem; padding: 0.3rem 0.5rem 0 0; }
+      .article-content h2 { font-size: 1.35rem; margin-top: 2.25rem; }
+      .article-content h3 {
+        grid-template-columns: 3rem 1fr;
+        column-gap: 0.9rem;
+        font-size: 1.2rem;
+        margin-top: 2.25rem;
+      }
+      .article-content h3::before { font-size: 2.5rem; }
+      .pull-quote, .article-content blockquote {
+        font-size: 1.2rem;
+        margin: 2rem 0.5rem;
+        padding: 1.5rem 1rem;
+      }
+      .local-rec { padding: 2rem 0.75rem; margin: 3rem 0 1rem; }
+      .lr-quote { font-size: 1.15rem; }
     }
 
-    /* ============================
-       Responsive
-       ============================ */
-    @media (max-width: 600px) {
-      .article-content h1 { font-size: 1.55rem; }
-      .article-content h2 { font-size: 1.2rem; }
-      .page-wrapper { padding: 1.25rem 1rem; }
+    /* ============================================================
+       Print
+       ============================================================ */
+    @media print {
+      .scroll-progress, .masthead, .toc-chipbar, .local-rec, .site-footer { display: none; }
+      .article-hero { page-break-after: avoid; }
     }
   </style>
 </head>
 
-<body>
-  <!-- ========================= HEADER ========================= -->
-  <header class="site-header">
-    <a href="/" class="logo-wrap">
-      <img
-        src="/assets/logo-primary.png"
-        alt="San Diego Lifestyle Guide logo"
-        class="logo-img"
-        width="120"
-        height="40"
-      >
+<body class="is-article">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  
+  <header class="masthead">
+    <a href="/" class="logo-wrap" aria-label="San Diego Lifestyle Guide home">
+      <img src="/assets/logo-primary.png" alt="San Diego Lifestyle Guide logo" class="logo-img" width="120" height="38">
       <span class="brand-name">San Diego Lifestyle Guide</span>
     </a>
     <span class="tagline">Your insider guide to San Diego</span>
@@ -339,22 +691,41 @@
     </div>
   </header>
 
-  <!-- ========================= MAIN ========================= -->
+  
+  
+  <section class="article-hero" aria-labelledby="hero-h1">
+    <div class="hero-img-wrap">
+      <img src="/og/things-to-do-at-night-san-diego.jpg" alt="" loading="eager" fetchpriority="high" decoding="async">
+      <div class="hero-scrim"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Nightlife</span>
+      <h1 class="hero-h1" id="hero-h1">Things to Do at Night in San Diego (2026)</h1>
+      <p class="hero-deck">After-hours San Diego — rooftop bars, late-night bites, beach bonfires, downtown shows, and the quieter night-side of a city that earns its reputation after sunset.</p>
+    </div>
+  </section>
+  
+
+  
+  
+  <div class="meta-strip" role="contentinfo">
+    
+    <span>2026-06-02</span>
+    <span class="dot">·</span><span>10 min read</span>
+  </div>
+  
+
+  
+  
+  <nav class="toc-chipbar" id="toc-chipbar" aria-label="Article sections"></nav>
+  
+
+  
   <main>
-    <div class="page-wrapper">
-
+    <div class="page-wrapper ">
       
-      <div class="article-meta">
-        <span class="date">2026-06-02</span>
-        <span class="read-time">10 min read</span>
-      </div>
-      
-
-      <article class="article-content">
-        <h1>Things to Do at Night in San Diego (2026)</h1>
-<p><em>After-hours San Diego — rooftop bars, late-night bites, beach bonfires, downtown shows, and the quieter night-side of a city that earns its reputation after sunset.</em></p>
-<hr>
-<p>San Diego has a reputation as a laid-back beach town, and that's fair — but it undersells what actually happens here after dark. The Gaslamp Quarter is one of the most concentrated nightlife blocks in the American West. North Park and South Park have built a genuinely excellent bar and music scene over the past decade. La Jolla's coastline looks different at night — quieter, more elemental, worth experiencing. And Balboa Park's outdoor spaces take on a different feel once the tourists clear out.</p>
+        <article class="article-content">
+          <p>San Diego has a reputation as a laid-back beach town, and that's fair — but it undersells what actually happens here after dark. The Gaslamp Quarter is one of the most concentrated nightlife blocks in the American West. North Park and South Park have built a genuinely excellent bar and music scene over the past decade. La Jolla's coastline looks different at night — quieter, more elemental, worth experiencing. And Balboa Park's outdoor spaces take on a different feel once the tourists clear out.</p>
 <p>The city's mild climate is the underrated variable. San Diego nights rarely drop below the low 60s, which means a lot of what makes nightlife here interesting happens outside: beach bonfires, rooftop bars, waterfront walks, open-air concert venues. There's a particular pleasure in sitting on a patio in December without a jacket, watching the city go about its evening.</p>
 <p>This guide covers the best things to do at night in San Diego in 2026 — from the high-energy blocks of downtown to the quieter alternatives that locals tend to keep to themselves.</p>
 <hr>
@@ -363,85 +734,83 @@
 <p>The Gaslamp Quarter is 16 blocks of Victorian-era architecture packed with bars, restaurants, clubs, and live music venues running roughly from Broadway down to the ballpark. Fifth Avenue is the spine of it — walkable, dense with options, and genuinely lively from Thursday through Saturday. Whether you're looking for a rooftop bar, a live DJ, a craft cocktail spot, or a late-night seafood dinner, it's all within a few blocks.</p>
 <p>The quality ranges from tourist-trap to genuinely excellent. For bars worth your time, Vin de Syrah (underground wine cave aesthetic, excellent by-the-glass list) and The Grass Skirt (tiki cocktails done properly) are consistently good. For live music, check what's on at The Music Box — it's the best mid-capacity venue downtown for touring acts.</p>
 <p>On Padres game nights, the entire area surges with energy. Non-game weeknights can actually be pleasant — shorter lines, more attentive service, same bars.</p>
-<p><strong>Good for:</strong> First-timers to San Diego, groups, date nights that want options and don't want to overthink it.</p>
+<aside class="good-for-pill"><span>Good for</span>First-timers to San Diego, groups, date nights that want options and don't want to overthink it.</aside>
 <hr>
 <h3>2. North Park — Where Locals Actually Go</h3>
 <p>North Park is San Diego's best neighborhood bar scene, full stop. The stretch around 30th Street and University Avenue has everything: craft breweries with late pours, divey neighborhood bars, vinyl-focused listening rooms, and a density of good-to-excellent restaurants for a pre-drink dinner. It's walkable, unpretentious, and decidedly local in character.</p>
 <p>Offline Brewing Co. on 30th has a back patio that fills up on warm evenings. Tiger! Tiger! (also on 30th) has one of the better tap lists in the city and a casual patio scene that doesn't feel like a performance. For something different, False Idol in nearby Mission Hills is a hidden tiki bar inside Craft &amp; Commerce — the entrance through the restaurant's back makes it feel like a genuine discovery even after you know it's there.</p>
 <p>The North Park Observatory, a converted Fox Theater on University Avenue, books touring acts across genres and has excellent acoustics. Check the calendar before any North Park night — it's often the best thing happening in the city.</p>
-<p><strong>Good for:</strong> Anyone who's done the Gaslamp and wants something more local, craft beer fans, music lovers, neighborhood wanderers.</p>
+<aside class="good-for-pill"><span>Good for</span>Anyone who's done the Gaslamp and wants something more local, craft beer fans, music lovers, neighborhood wanderers.</aside>
 <hr>
 <h3>3. Sunset Cliffs — The Best Free Show at Dusk</h3>
 <p>Sunset Cliffs Natural Park in Ocean Beach isn't technically a nighttime destination — but arriving about 30 minutes before sunset and staying through the transition to dark is one of San Diego's great free experiences. The cliffs drop straight into the Pacific, the horizon is unobstructed, and when conditions are right, the orange-to-purple color shifts are dramatic enough to draw actual crowds.</p>
 <p>After sunset, the park empties quickly and becomes something else: a quiet stretch of clifftop with the sound of waves below and the city lights of Point Loma behind you. Bring a blanket. Bring wine in a non-glass container (the park rules are loosely enforced but glass on the cliffs is genuinely dangerous). There are no facilities, no vendors, no ticket booth — just the ocean and the sky.</p>
 <p>Walk north from the main Sunset Cliffs Boulevard overlooks to find less-trafficked spots. The stone arches near Ladera Street are worth finding.</p>
-<p><strong>Good for:</strong> Couples, solo travelers who want a meditative evening, anyone who's done the tourist version of San Diego and wants a quieter alternative.</p>
+<aside class="good-for-pill"><span>Good for</span>Couples, solo travelers who want a meditative evening, anyone who's done the tourist version of San Diego and wants a quieter alternative.</aside>
 <hr>
 <h3>4. Beach Bonfires — Mission Beach and Ocean Beach</h3>
 <p>San Diego is one of the few cities where a beach bonfire on a weeknight is a completely normal thing to do. The City of San Diego maintains fire rings at Mission Beach and Ocean Beach, and they're first-come, first-served. Bring wood (bundle bags are sold at most grocery stores), arrive before sunset to claim a ring, and settle in.</p>
 <p>The Mission Beach rings stretch along the beach between the Belmont Park roller coaster and the jetty. The Ocean Beach rings are clustered near the pier. Both are legitimately enjoyable, but the OB beach has a different energy — more local, less crowded on weekdays, and backed by the bluffs that make it feel more secluded than it is.</p>
 <p>Fire ring etiquette: don't take over an unattended ring, use only the fire rings (not random spots on the sand), and pack out everything you bring. Fires typically go until 10pm — the city enforces this.</p>
-<p><strong>Good for:</strong> Groups, casual hangouts, visitors who want an authentic San Diego evening rather than another bar.</p>
+<aside class="good-for-pill"><span>Good for</span>Groups, casual hangouts, visitors who want an authentic San Diego evening rather than another bar.</aside>
 <hr>
 <h3>5. Rooftop Bars — The Best Views After Dark</h3>
 <p>San Diego's hotel rooftop bar scene has improved significantly in recent years. Level 9 at the Pendry San Diego in the Gaslamp is the city's best-known option — genuinely good cocktails, excellent views over the Gaslamp and out to the bay, and a scene that manages to stay upscale without becoming insufferable. Reservations are advisable on weekends.</p>
 <p>The Rooftop at The Nolen, on the top floor of the Marriott Gaslamp, has 360-degree views that include Petco Park and the Coronado Bridge. For a less tourist-facing option, the rooftop bar at Porto Vista in Little Italy overlooks the neighborhood's tiled rooftops toward the harbor — a better view at a lower price point.</p>
 <p>Views are best in clear weather, which is most of the year in San Diego. Marine layer can roll in by 9-10pm in summer; early evening is the optimal window.</p>
-<p><strong>Good for:</strong> Date nights, out-of-town visitors, anyone who wants to see the city from above.</p>
+<aside class="good-for-pill"><span>Good for</span>Date nights, out-of-town visitors, anyone who wants to see the city from above.</aside>
 <hr>
 <h3>6. La Jolla Cove Area — Kayak Tours and Evening Coastline</h3>
 <p>The La Jolla Cove doesn't get much play in nightlife conversations, but the coastline between the Cove and the Children's Pool is worth experiencing after the daytime crowds disappear. The harbor seals that inhabit the Children's Pool beach are more visible and audible in the evening — a genuinely strange and memorable scene, especially when the males are vocal.</p>
 <p>Several outfitters run sea cave kayak tours that operate through sunset — La Jolla Kayak on Coast Boulevard is the most established, offering guided tours that end as the light fades. The bioluminescent kayak tours they run in late summer (when conditions allow) are among the most unusual things you can do outdoors in this city: paddle into darkness and watch the water glow blue-green around your blades.</p>
 <p>After a cove visit, dinner on Prospect Street in La Jolla is the natural next step. George's at the Cove has a rooftop patio that stays busy through the evening.</p>
-<p><strong>Good for:</strong> Couples, nature-oriented visitors, anyone looking for an alternative to bar-based nightlife.</p>
+<aside class="good-for-pill"><span>Good for</span>Couples, nature-oriented visitors, anyone looking for an alternative to bar-based nightlife.</aside>
 <hr>
 <h3>7. Comedy Clubs — National Acts, Local Standouts</h3>
 <p>San Diego has two serious comedy clubs worth knowing about. The American Comedy Co. in the Gaslamp Quarter books touring national acts — comedians who are one TV credit away from selling out theaters but still playing club-sized rooms. Sight lines are excellent, two-drink minimum, worth checking the calendar if you're visiting on a weekend.</p>
 <p>The Comedy Palace in Kearny Mesa has been running since 1983 and has its own logic: long-running open mics that have launched actual careers, a no-frills room where the material does the work, and prices that remind you what comedy used to cost. It's not the Gaslamp, but for a genuine local comedy night it's the right call.</p>
 <p>Check both calendars before planning — the American Comedy Co. books months in advance for headliners, and last-minute tickets for big names can be difficult.</p>
-<p><strong>Good for:</strong> Date nights, groups, anyone who wants a structured evening rather than a bar crawl.</p>
+<aside class="good-for-pill"><span>Good for</span>Date nights, groups, anyone who wants a structured evening rather than a bar crawl.</aside>
 <hr>
 <h3>8. Belmont Park — Roller Coaster at Night</h3>
 <p>Belmont Park on Mission Beach is a beachfront amusement park that operates into the evening, and its centerpiece — the Giant Dipper wooden roller coaster — is more enjoyable at night than during the day. The coaster is a legitimate classic (built in 1925, fully restored), and riding it with the Pacific to one side and the Mission Beach boardwalk lit up below is a specific kind of fun that's hard to find anywhere else in the city.</p>
 <p>The surrounding park has enough to fill an hour or two: the indoor wave machine, carnival games, a handful of restaurants and bars including the Sky Thrills bar with views over the beach. In summer, the park runs extended evening hours. Parking in Mission Beach is challenging — arrive by bike, on foot from the boardwalk, or plan to park on West Mission Bay Drive and walk.</p>
-<p><strong>Good for:</strong> Families with older kids, date nights that want something different, beach boardwalk energy.</p>
+<aside class="good-for-pill"><span>Good for</span>Families with older kids, date nights that want something different, beach boardwalk energy.</aside>
 <hr>
 <h3>9. Late-Night Tacos — The Essential San Diego Tradition</h3>
 <p>No guide to nighttime San Diego is complete without the taco stop. San Diego sits 20 miles from the Tijuana border, and the taco culture that proximity produces is real and serious. El Zarape in North Park is the most beloved late-night option among locals: carne asada fries that are their own food group, birria tacos done the right way, open late enough to absorb whatever the rest of your evening produced.</p>
 <p>In Mission Hills, Lolita's on West Washington is the other name that comes up in every conversation. The California burrito (carne asada, french fries, cheese, sour cream, wrapped in a flour tortilla) is either exactly what you want at midnight or not your thing — but it's worth forming an opinion.</p>
 <p>Hillcrest's Lucha Libre Gourmet Taco Shop on Washington Street is the visually maximalist option: lucha libre masks on every wall, longer lines, good food. The adobada tacos are the move.</p>
-<p><strong>Good for:</strong> The inevitable capstone to any evening, groups who need to eat something before dispersing, genuinely excellent food at genuinely low prices.</p>
+<aside class="good-for-pill"><span>Good for</span>The inevitable capstone to any evening, groups who need to eat something before dispersing, genuinely excellent food at genuinely low prices.</aside>
 <hr>
 <h3>10. Dive Bars and Hidden Rooms — The B-Side of San Diego Nights</h3>
 <p>San Diego has excellent dive bars if you know where to look. The Whistlestop in South Park is the right kind of shabby: cheap drinks, a back patio, a genuinely mixed crowd, and enough regulars to give it an identity. For something stranger, visit Nunu's Cocktail Lounge in Hillcrest — leopard print booths, strong pours, open since 1974, a Yelp page full of people who can't quite explain why they keep coming back.</p>
 <p>Waterfront Bar and Grill in Little Italy is the city's oldest bar (opened in 1933) and holds its own against the chic wine bars that have grown up around it. The vibe is maritime, the prices are honest, and it closes at 2am.</p>
 <p>For a late-night coffee alternative to the bars: Bird Rock Coffee Roasters in Bird Rock runs late on weekends, and the Influx Café in North Park pulls excellent espresso for the post-show crowd.</p>
-<p><strong>Good for:</strong> Anyone who prefers a local bar over a venue, people who've done the Instagram spots and want something real.</p>
+<aside class="good-for-pill"><span>Good for</span>Anyone who prefers a local bar over a venue, people who've done the Instagram spots and want something real.</aside>
 <hr>
 <h2>Explore More of San Diego After Dark</h2>
 <p>San Diego's nightlife extends beyond this list — from the waterfront dining at Seaport Village to late-night gallery openings along Kettner in Little Italy. Subscribe to the San Diego Lifestyle Guide newsletter for event calendars, seasonal picks, and neighborhood spotlights delivered to your inbox.</p>
 <hr>
 <p><em>This guide was last updated in January 2026. Hours, seasonal schedules, and venue details change regularly — confirm specifics before visiting.</em></p>
-      </article>
+        </article>
 
-      
-      <!-- Featured Provider CTA -->
-      <aside class="featured-provider" aria-label="Featured cleaning service">
-        <div class="fp-label">San Diego Partner</div>
-        <div class="fp-title">Bravo Maids — San Diego House Cleaning</div>
-        <div class="fp-body">San Diego cleaning by Bravo Maids — book online</div>
-        <div class="fp-cta">
-          <a href="https://bravomaids.com/" target="_blank" rel="noopener sponsored">
-            Book Online
-          </a>
-        </div>
-      </aside>
-      
+        
+        
+        <blockquote class="pull-quote">After-hours San Diego — rooftop bars, late-night bites, beach bonfires, downtown shows, and the quieter night-side of a city that earns its reputation after sunset.</blockquote>
+        
 
+        
+        <aside class="local-rec" aria-label="Local recommendation">
+          <div class="lr-label">A Local Recommendation</div>
+          <div class="lr-quote">San Diego cleaning by Bravo Maids — book online</div>
+          <a class="lr-link" href="https://bravomaids.com/" target="_blank" rel="noopener sponsored">Bravo Maids →</a>
+        </aside>
+      
     </div>
   </main>
 
-  <!-- ========================= FOOTER ========================= -->
+  
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
@@ -451,15 +820,95 @@
           <a href="mailto:sdlifestyle@proton.me">sdlifestyle@proton.me</a>
         </div>
       </div>
-      <div class="newsletter-cta">
-        <strong style="color:#fff">Stay in the loop.</strong><br>
-        Get the best of San Diego delivered weekly.<br>
+      <div class="newsletter-block">
+        <strong>The Weekly</strong><br>
+        The best of San Diego delivered every Friday morning.<br>
         <a href="https://sandiegolifestyleguide.com/subscribe" target="_blank" rel="noopener">
-          Subscribe to the newsletter →
+          Subscribe →
         </a>
       </div>
     </div>
   </footer>
+
+  
+  
+  <script>
+    (function(){
+      // ----- Scroll progress hairline -----
+      var bar = document.querySelector('.scroll-progress');
+      var article = document.querySelector('.article-content');
+      function tick(){
+        if (!article || !bar) return;
+        var rect = article.getBoundingClientRect();
+        var total = Math.max(1, article.scrollHeight + rect.top - window.innerHeight + 200);
+        var passed = Math.max(0, -rect.top + 1);
+        var pct = Math.max(0, Math.min(100, (passed / total) * 100));
+        bar.style.width = pct + '%';
+      }
+
+      // ----- Build TOC chipbar from numbered ### sections -----
+      var chipbar = document.getElementById('toc-chipbar');
+      var headings = article ? article.querySelectorAll('h3') : [];
+      var chips = [];
+      if (chipbar && headings.length > 0) {
+        headings.forEach(function(h, i){
+          var id = 'section-' + (i+1);
+          h.id = id;
+          var rawText = (h.textContent || '').replace(/^\s*\d+\.?\s*/, '');
+          var shortText = rawText.split(/[—\-]/)[0].trim();
+          if (shortText.length > 24) shortText = shortText.slice(0, 22) + '…';
+          var a = document.createElement('a');
+          a.className = 'toc-chip';
+          a.href = '#' + id;
+          a.innerHTML = '<span class="toc-chip-num">' + String(i+1).padStart(2,'0') + '</span>' + shortText;
+          chipbar.appendChild(a);
+          chips.push({ el: a, id: id });
+        });
+      }
+
+      // ----- IntersectionObserver: highlight active chip -----
+      if ('IntersectionObserver' in window && chips.length > 0) {
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) {
+              var id = e.target.id;
+              chips.forEach(function(c){
+                if (c.id === id) {
+                  c.el.classList.add('active');
+                  // Auto-scroll the active chip into view in the chipbar
+                  try {
+                    var bb = chipbar.getBoundingClientRect();
+                    var cb = c.el.getBoundingClientRect();
+                    if (cb.right > bb.right || cb.left < bb.left) {
+                      chipbar.scrollTo({ left: c.el.offsetLeft - 16, behavior: 'smooth' });
+                    }
+                  } catch(_) {}
+                } else c.el.classList.remove('active');
+              });
+            }
+          });
+        }, { rootMargin: '-25% 0px -65% 0px' });
+        headings.forEach(function(h){ obs.observe(h); });
+      }
+
+      // ----- Sticky mini-header on scroll -----
+      var lastY = 0;
+      function onScroll(){
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        if (y > 200 && !document.body.classList.contains('masthead-mini')) {
+          document.body.classList.add('masthead-mini');
+        } else if (y < 80 && document.body.classList.contains('masthead-mini')) {
+          document.body.classList.remove('masthead-mini');
+        }
+        tick();
+        lastY = y;
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', tick, { passive: true });
+      tick();
+    })();
+  </script>
+  
 
 </body>
 </html>
