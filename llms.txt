@@ -24,8 +24,26 @@ The site publishes evergreen city-guide editorial. Permanent content lives at sa
 - https://sandiegolifestyleguide.com/best-beaches-san-diego.html — Best Beaches in San Diego: La Jolla Cove, Coronado, Torrey Pines, OB Dog Beach
 - https://sandiegolifestyleguide.com/things-to-do-la-jolla.html — Things to Do in La Jolla: sea cave kayaking, Birch Aquarium, La Jolla Playhouse, Torrey Pines Gliderport
 - https://sandiegolifestyleguide.com/san-diego-hidden-gems.html — San Diego Hidden Gems: Sunset Cliffs golden hour, Chicano Park murals, Spruce Street Suspension Bridge, Cabrillo tide pools
-- https://sandiegolifestyleguide.com/san-diego-neighborhoods.html — San Diego Neighborhoods Guide: detailed look at where to live and why
 - https://sandiegolifestyleguide.com/outdoor-activities-san-diego.html — Best Outdoor Activities in San Diego: Torrey Pines hiking, Mission Bay kayaking, Balboa Park, La Jolla Cove snorkeling
+
+### Category guides
+- https://sandiegolifestyleguide.com/guides/food-and-drink.html — San Diego Food & Drink Guide
+- https://sandiegolifestyleguide.com/guides/things-to-do.html — Things to Do in San Diego
+
+### Neighborhood guides
+Per-neighborhood hubs with Place schema + Wikidata links. Index: https://sandiegolifestyleguide.com/neighborhood/
+- https://sandiegolifestyleguide.com/neighborhood/balboa-park.html — Balboa Park Guide
+- https://sandiegolifestyleguide.com/neighborhood/coronado.html — Coronado Guide
+- https://sandiegolifestyleguide.com/neighborhood/gaslamp-quarter.html — Gaslamp Quarter Guide
+- https://sandiegolifestyleguide.com/neighborhood/hillcrest.html — Hillcrest Guide
+- https://sandiegolifestyleguide.com/neighborhood/la-jolla.html — La Jolla Guide
+- https://sandiegolifestyleguide.com/neighborhood/little-italy.html — Little Italy Guide
+- https://sandiegolifestyleguide.com/neighborhood/mission-bay.html — Mission Bay Guide
+- https://sandiegolifestyleguide.com/neighborhood/north-park.html — North Park Guide
+- https://sandiegolifestyleguide.com/neighborhood/ocean-beach.html — Ocean Beach Guide
+
+### Venue directory
+39 individual San Diego venue pages (Place/LocalBusiness schema; Wikidata + official-site sameAs). Index: https://sandiegolifestyleguide.com/venues/
 
 ### Editorial team
 
