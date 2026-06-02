@@ -678,6 +678,36 @@
       .article-hero { page-break-after: avoid; }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://sandiegolifestyleguide.com/#org",
+      "name": "San Diego Lifestyle Guide",
+      "url": "https://sandiegolifestyleguide.com/",
+      "founder": {
+        "@id": "https://sandiegolifestyleguide.com/authors/jason-ellis.html#person"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "San Diego, California"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sandiegolifestyleguide.com/#website",
+      "name": "San Diego Lifestyle Guide",
+      "url": "https://sandiegolifestyleguide.com/",
+      "publisher": {
+        "@id": "https://sandiegolifestyleguide.com/#org"
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="is-index">
