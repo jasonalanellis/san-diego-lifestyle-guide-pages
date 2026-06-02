@@ -42,3 +42,7 @@ Editorial: sdlifestyle@proton.me
 ## What this site is not
 
 San Diego Lifestyle Guide is not a directory, an aggregator, or an AI-generated content farm. Every article is original editorial. Cross-promotional links to local partners (when present) are labeled and editorially-styled, not paid placements.
+
+## Feeds
+- RSS feed: https://sandiegolifestyleguide.com/feed.xml
+- JSON Feed: https://sandiegolifestyleguide.com/feed.json
