@@ -1,0 +1,488 @@
+[
+  {
+    "t": "San Diego Lifestyle Guide — Local Guide",
+    "u": "/",
+    "d": "The best local guide for San Diego.",
+    "c": "home"
+  },
+  {
+    "t": "Annual Events &amp; Festivals in San Diego",
+    "u": "/events.html",
+    "d": "The recurring calendar of San Diego — Comic-Con, SD Pride, December Nights, the County Fair, farmers markets, and the festivals locals plan their year around.",
+    "c": "events"
+  },
+  {
+    "t": "Jason Ellis",
+    "u": "/authors/jason-ellis.html",
+    "d": "Jason Ellis is the Founder & Editor-in-Chief of San Diego Lifestyle Guide. Jason Ellis is a long-time San Diego resident, the founder of San Diego Lifestyle Guide, and a working operator in the l",
+    "c": "article"
+  },
+  {
+    "t": "Best Beaches in San Diego: A Local's Guide",
+    "u": "/best-beaches-san-diego.html",
+    "d": "La Jolla Cove leopard sharks, Coronado",
+    "c": "article"
+  },
+  {
+    "t": "Best Deep Cleaning Services in La Jolla, CA (2025)",
+    "u": "/best-deep-cleaning-la-jolla-ca.html",
+    "d": "La Jolla",
+    "c": "article"
+  },
+  {
+    "t": "Best Family Activities in San Diego (2025)",
+    "u": "/best-family-activities-san-diego.html",
+    "d": "San Diego is one of the country",
+    "c": "article"
+  },
+  {
+    "t": "Best House Cleaning Services in San Diego (2025)",
+    "u": "/best-house-cleaning-san-diego.html",
+    "d": "San Diego",
+    "c": "article"
+  },
+  {
+    "t": "Best Move-Out Cleaning Services in San Diego (2025)",
+    "u": "/best-move-out-cleaning-san-diego.html",
+    "d": "Moving out of your San Diego rental? A professional move-out cleaning can help you recover your security deposit and make a smooth transition to your next",
+    "c": "article"
+  },
+  {
+    "t": "Best Neighborhoods in San Diego (2025)",
+    "u": "/best-neighborhoods-san-diego.html",
+    "d": "San Diego is less a single city than a collection of distinct neighborhoods — each with its own character, dining scene, and sense of place. Whether you",
+    "c": "article"
+  },
+  {
+    "t": "Best Post-Construction Cleaning Services in San Diego (2025)",
+    "u": "/best-post-construction-cleaning-san-diego.html",
+    "d": "Renovation complete? New build finished? Post-construction cleaning requires specialized skills and equipment to make your space truly move-in ready. Here",
+    "c": "article"
+  },
+  {
+    "t": "Best Restaurants in San Diego (2026)",
+    "u": "/best-restaurants-san-diego.html",
+    "d": "Best restaurants in San Diego for 2026 — from Juniper & Ivy in Little Italy to Addison in Del Mar. Upscale dining, beloved tacos, and everything between.",
+    "c": "article"
+  },
+  {
+    "t": "Cheap Things to Do in San Diego (2026)",
+    "u": "/cheap-things-to-do-san-diego.html",
+    "d": "San Diego",
+    "c": "article"
+  },
+  {
+    "t": "Best Coffee Shops in San Diego: A Neighborhood-by-Neighborhood Guide",
+    "u": "/coffee-san-diego.html",
+    "d": "Discover San Diego",
+    "c": "article"
+  },
+  {
+    "t": "Dog Friendly Things to Do in San Diego (2026)",
+    "u": "/dog-friendly-things-to-do-san-diego.html",
+    "d": "San Diego may be the most dog-friendly large city in the country — off-leash beaches, dog-welcoming brewery patios, trail systems that cover every terrain,",
+    "c": "article"
+  },
+  {
+    "t": "Best Farmers Markets in San Diego: Weekly Guide to Fresh Local Produce",
+    "u": "/farmers-markets-san-diego.html",
+    "d": "Find the best farmers markets in San Diego — from the legendary Little Italy Mercato on Saturdays to Hillcrest, Leucadia, Pacific Beach, and Ocean Beach markets every week.",
+    "c": "article"
+  },
+  {
+    "t": "A Complete Guide to Home Maintenance San Diego Tips for Savvy Homeowners",
+    "u": "/home-maintenance-san-diego-tips.html",
+    "d": "A Complete Guide to Home Maintenance San Diego Tips for Savvy Homeowners — San Diego Lifestyle Guide, San Diego. Local Lifestyle Resource with ★ rating.",
+    "c": "article"
+  },
+  {
+    "t": "San Diego Guides",
+    "u": "/guides/",
+    "d": "Category guides for San Diego, edited by San Diego Lifestyle Guide — food &amp; drink, things to do, and more.",
+    "c": "guide"
+  },
+  {
+    "t": "San Diego Food &amp; Drink Guide",
+    "u": "/guides/food-and-drink.html",
+    "d": "The San Diego Food &amp; Drink Guide — best restaurants, coffee shops, and farmers markets, curated by San Diego Lifestyle Guide editors.",
+    "c": "guide"
+  },
+  {
+    "t": "Things to Do in San Diego",
+    "u": "/guides/things-to-do.html",
+    "d": "The definitive guide to things to do in San Diego — beaches, hiking, nightlife, family activities, day trips, and hidden gems, curated by local editors.",
+    "c": "guide"
+  },
+  {
+    "t": "San Diego Neighborhoods",
+    "u": "/neighborhood/",
+    "d": "Neighborhood guides for San Diego, edited by San Diego Lifestyle Guide.",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Balboa Park Guide",
+    "u": "/neighborhood/balboa-park.html",
+    "d": "Balboa Park is a 1,200-acre cultural campus in the middle of the city — 17 museums, the San Diego Zoo, the Spreckels Organ Pavilion, Japanese Friendship Ga",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Coronado Guide",
+    "u": "/neighborhood/coronado.html",
+    "d": "Coronado is the island-ish peninsula across the bay — wide golden-sand beaches, the historic Hotel del Coronado, the Silver Strand, and one of the best dog",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Gaslamp Quarter Guide",
+    "u": "/neighborhood/gaslamp-quarter.html",
+    "d": "The Gaslamp is downtown San Diego",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Hillcrest Guide",
+    "u": "/neighborhood/hillcrest.html",
+    "d": "Hillcrest is San Diego",
+    "c": "neighborhood"
+  },
+  {
+    "t": "La Jolla Guide",
+    "u": "/neighborhood/la-jolla.html",
+    "d": "La Jolla is the coastal village north of San Diego — sea cave kayaking, the Cove",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Little Italy Guide",
+    "u": "/neighborhood/little-italy.html",
+    "d": "Little Italy is San Diego",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Mission Bay Guide",
+    "u": "/neighborhood/mission-bay.html",
+    "d": "Mission Bay Park is 4,200 acres of water, beaches, and parkland built for recreation — calm bay-side beaches for swimming, the bike paths around the bay, F",
+    "c": "neighborhood"
+  },
+  {
+    "t": "North Park Guide",
+    "u": "/neighborhood/north-park.html",
+    "d": "North Park is San Diego",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Ocean Beach Guide",
+    "u": "/neighborhood/ocean-beach.html",
+    "d": "Ocean Beach (OB) is San Diego",
+    "c": "neighborhood"
+  },
+  {
+    "t": "Best Outdoor Activities in San Diego (2026)",
+    "u": "/outdoor-activities-san-diego.html",
+    "d": "The best outdoor activities in San Diego — Torrey Pines hiking, Balboa Park, Mission Bay kayaking, Sunset Cliffs, La Jolla Cove snorkeling, and more. Locals know.",
+    "c": "article"
+  },
+  {
+    "t": "A Complete Guide to San Diego Airbnb Hosting Tips",
+    "u": "/san-diego-airbnb-hosting-tips.html",
+    "d": "A Complete Guide to San Diego Airbnb Hosting Tips — San Diego Lifestyle Guide, San Diego. Local Lifestyle Resource with ★ rating.",
+    "c": "article"
+  },
+  {
+    "t": "San Diego Arts & Culture Guide: Museums, Theater, Music & More",
+    "u": "/san-diego-arts-culture.html",
+    "d": "Explore San Diego",
+    "c": "article"
+  },
+  {
+    "t": "Best Day Trips from San Diego: Beaches, Mountains, Desert & More",
+    "u": "/san-diego-day-trips.html",
+    "d": "Explore the best day trips from San Diego — from Temecula wine country and Julian apple pie to Anza-Borrego wildflowers, Palm Springs, Tijuana, and Joshua Tree.",
+    "c": "article"
+  },
+  {
+    "t": "San Diego Family Guide: Best Attractions for Kids & Families",
+    "u": "/san-diego-family-guide.html",
+    "d": "Your complete family guide to San Diego — from the world-famous San Diego Zoo and Balboa Park to LegoLand, SeaWorld, and Coronado Beach. Plan the perfect family vacation.",
+    "c": "article"
+  },
+  {
+    "t": "Mastering Your First Home Purchase: San Diego First Time Home Buyer Tips for Savvy Buyers",
+    "u": "/san-diego-first-time-home-buyer-tips.html",
+    "d": "Mastering Your First Home Purchase: San Diego First Time Home Buyer Tips for Savvy Buyers — San Diego Lifestyle Guide, San Diego. Local Lifestyle Resource",
+    "c": "article"
+  },
+  {
+    "t": "San Diego's Best Kept Secrets (That Locals Actually Love)",
+    "u": "/san-diego-hidden-gems.html",
+    "d": "Skip the tourist traps. These underrated San Diego spots are where locals actually go — from Sunset Cliffs to Chicano Park.",
+    "c": "article"
+  },
+  {
+    "t": "Best Hiking in San Diego | Trails for Every Level",
+    "u": "/san-diego-hiking-guide.html",
+    "d": "The best hiking trails in San Diego — Torrey Pines, Los Peñasquitos Canyon, Cowles Mountain, the Coast to Crest Trail, Iron Mountain, and Potato Chip Rock. All skill levels.",
+    "c": "article"
+  },
+  {
+    "t": "San diego home tips: A complete guide to mastering coastal maintenance.",
+    "u": "/san-diego-home-tips.html",
+    "d": "San diego home tips: A complete guide to mastering coastal maintenance. — San Diego Lifestyle Guide, San Diego. Local Lifestyle Resource with ★ rating.",
+    "c": "article"
+  },
+  {
+    "t": "Things to Do at Night in San Diego (2026)",
+    "u": "/things-to-do-at-night-san-diego.html",
+    "d": "After-hours San Diego — rooftop bars, late-night bites, beach bonfires, downtown shows, and the quieter night-side of a city that earns its reputation afte",
+    "c": "article"
+  },
+  {
+    "t": "Things to Do in Little Italy San Diego (2026)",
+    "u": "/things-to-do-in-little-italy-san-diego.html",
+    "d": "A neighborhood guide — Saturday Mercato, the bocce court, India Street dining, espresso bars, gallery hops, and why locals keep ending up here on date nigh",
+    "c": "article"
+  },
+  {
+    "t": "The Best Things to Do in La Jolla",
+    "u": "/things-to-do-la-jolla.html",
+    "d": "A local",
+    "c": "article"
+  },
+  {
+    "t": "San Diego Venues",
+    "u": "/venues/",
+    "d": "Every venue we cover in San Diego, organized by neighborhood.",
+    "c": "venue"
+  },
+  {
+    "t": "Balboa Park",
+    "u": "/venues/balboa-park.html",
+    "d": "The San Diego Zoo in Balboa Park remains one of the finest zoos on earth, and that distinction is hard-earned: 100 acres of naturalistic habitats, over 12,",
+    "c": "venue"
+  },
+  {
+    "t": "Belmont Park",
+    "u": "/venues/belmont-park.html",
+    "d": "Quick AnswerThe best things to do at night in San Diego start at the Gaslamp Quarter&#x27;s rooftop bars and Sunset Cliffs golden hour, then spread outward from",
+    "c": "venue"
+  },
+  {
+    "t": "Birch Aquarium at Scripps",
+    "u": "/venues/birch-aquarium-at-scripps.html",
+    "d": "Birch Aquarium at Scripps is a museum in La Jolla. Editorial coverage of this spot is in our weekly guide.",
+    "c": "venue"
+  },
+  {
+    "t": "Children&#x27;s Pool",
+    "u": "/venues/childrens-pool.html",
+    "d": "The surrounding area — the village of La Jolla, the seal colony at Children&#x27;s Pool, the cliffside paths — makes the whole trip worth building a full day ar",
+    "c": "venue"
+  },
+  {
+    "t": "Coronado Beach",
+    "u": "/venues/coronado-beach.html",
+    "d": "Coronado Beach consistently ranks among the best beaches in the country, and it earns the distinction. The beach is wide, the sand is soft, and the gentle",
+    "c": "venue"
+  },
+  {
+    "t": "Coronado Bridge",
+    "u": "/venues/coronado-bridge.html",
+    "d": "Coronado is accessible via the Coronado Bridge (the bridge itself is worth seeing) or a short ferry ride from the Broadway Pier in downtown San Diego. The",
+    "c": "venue"
+  },
+  {
+    "t": "Cowles Mountain",
+    "u": "/venues/cowles-mountain.html",
+    "d": "Mission Trails Regional Park is one of the largest urban parks in the country — 7,200 acres of canyon, chaparral, and riparian woodland in the hills east o",
+    "c": "venue"
+  },
+  {
+    "t": "Fiesta Island",
+    "u": "/venues/fiesta-island.html",
+    "d": "Aquatic rental shops throughout Mission Bay provide kayaks, paddleboards, and electric boats. Fiesta Island is popular for dogs, kite flying, and open-fiel",
+    "c": "venue"
+  },
+  {
+    "t": "Fleet Science Center",
+    "u": "/venues/fleet-science-center.html",
+    "d": "Balboa Park is where the zoo lives, but it&#x27;s also a 1,200-acre cultural campus with 17 museums, performing arts venues, gardens, and open lawns — and many",
+    "c": "venue"
+  },
+  {
+    "t": "Gaslamp Quarter",
+    "u": "/venues/gaslamp-quarter.html",
+    "d": "The Gaslamp Quarter&#x27;s Victorian commercial architecture is one of San Diego&#x27;s genuine historical assets, and walking the district requires no admission. Th",
+    "c": "venue"
+  },
+  {
+    "t": "Hillcrest",
+    "u": "/venues/hillcrest.html",
+    "d": "Service Area: San Diego County including La Jolla, Del Mar, Carlsbad, Encinitas, Pacific Beach, Mission Bay, Hillcrest, North Park, Chula Vista, and surrou",
+    "c": "venue"
+  },
+  {
+    "t": "Horton Grand Hotel",
+    "u": "/venues/horton-grand-hotel.html",
+    "d": "The Gaslamp&#x27;s architecture is best appreciated from the street: the Romanesque cornices, the ornate cast-iron facades, the Victorian commercial storefronts",
+    "c": "venue"
+  },
+  {
+    "t": "Hotel del Coronado",
+    "u": "/venues/hotel-del-coronado.html",
+    "d": "The sand at Coronado is famously golden — literally, due to trace amounts of mica in the sand that give it a shimmer you don&#x27;t see at other beaches. Backed",
+    "c": "venue"
+  },
+  {
+    "t": "Japanese Friendship Garden",
+    "u": "/venues/japanese-friendship-garden.html",
+    "d": "On Tuesdays, residents get free admission to rotating institutions through the Balboa Park Free Tuesday program. Even on a paid admission day, the park&#x27;s o",
+    "c": "venue"
+  },
+  {
+    "t": "La Jolla Cove",
+    "u": "/venues/la-jolla-cove.html",
+    "d": "La Jolla Cove is not a secret, but it&#x27;s on this list because it&#x27;s genuinely one of the most remarkable beach experiences in the country and deserves its re",
+    "c": "venue"
+  },
+  {
+    "t": "La Jolla",
+    "u": "/venues/la-jolla.html",
+    "d": "La Jolla Cove is not a secret, but it&#x27;s on this list because it&#x27;s genuinely one of the most remarkable beach experiences in the country and deserves its re",
+    "c": "venue"
+  },
+  {
+    "t": "Legoland California",
+    "u": "/venues/legoland-california.html",
+    "d": "Legoland California is a tourist attraction in Carlsbad. Editorial coverage of this spot is in our weekly guide.",
+    "c": "venue"
+  },
+  {
+    "t": "Little Italy",
+    "u": "/venues/little-italy.html",
+    "d": "San Diego has an embarrassment of riches when it comes to family activities. The combination of near-perfect weather, iconic wildlife institutions, and bea",
+    "c": "venue"
+  },
+  {
+    "t": "Los Peñasquitos Canyon Preserve",
+    "u": "/venues/los-peñasquitos-canyon-preserve.html",
+    "d": "Los Peñasquitos Canyon Preserve in Carmel Valley is a 4,000-acre urban wilderness with a creek-side trail system that feels significantly more remote than",
+    "c": "venue"
+  },
+  {
+    "t": "Maritime Museum of San Diego",
+    "u": "/venues/maritime-museum-of-san-diego.html",
+    "d": "The local museum calendar has more free or discounted days than most residents realize — Birch Aquarium at Scripps runs free admission for kids under 3, an",
+    "c": "venue"
+  },
+  {
+    "t": "Mission Bay Aquatic Center",
+    "u": "/venues/mission-bay-aquatic-center.html",
+    "d": "The park becomes the site of various free outdoor events through the year — check the city&#x27;s parks calendar for concerts, cultural festivals, and community",
+    "c": "venue"
+  },
+  {
+    "t": "Mission Bay Park",
+    "u": "/venues/mission-bay-park.html",
+    "d": "Mission Bay Park is one of the best municipal outdoor spaces in the country: 4,200 acres of water, parks, and beaches specifically designed for recreation.",
+    "c": "venue"
+  },
+  {
+    "t": "Mission Hills",
+    "u": "/venues/mission-hills.html",
+    "d": "San Diego has an embarrassment of riches when it comes to family activities. The combination of near-perfect weather, iconic wildlife institutions, and bea",
+    "c": "venue"
+  },
+  {
+    "t": "Mission Trails Regional Park",
+    "u": "/venues/mission-trails-regional-park.html",
+    "d": "Mission Trails Regional Park is one of the largest urban parks in the country — 7,200 acres of canyon, chaparral, and riparian woodland in the hills east o",
+    "c": "venue"
+  },
+  {
+    "t": "North Park",
+    "u": "/venues/north-park.html",
+    "d": "Whether you&#x27;re in a Craftsman bungalow in North Park, a modern home in Carmel Valley, or a coastal property in La Jolla, you need a cleaning service that u",
+    "c": "venue"
+  },
+  {
+    "t": "Pacific Beach",
+    "u": "/venues/pacific-beach.html",
+    "d": "Pacific Beach — PB to anyone who lives here — operates at a different frequency than the rest of San Diego&#x27;s coastline. The 3-mile boardwalk that runs from",
+    "c": "venue"
+  },
+  {
+    "t": "Pizza Port",
+    "u": "/venues/pizza-port.html",
+    "d": "Societe Brewing in Miramar has a beautiful indoor-outdoor tasting room where dogs are genuinely part of the vibe. Pizza Port in Ocean Beach has a front pat",
+    "c": "venue"
+  },
+  {
+    "t": "San Diego Central Library",
+    "u": "/venues/san-diego-central-library.html",
+    "d": "San Diego Central Library is a place in Downtown. Editorial coverage of this spot is in our weekly guide.",
+    "c": "venue"
+  },
+  {
+    "t": "San Diego Natural History Museum",
+    "u": "/venues/san-diego-natural-history-museum.html",
+    "d": "San Diego Natural History Museum is a museum in Balboa Park. Editorial coverage of this spot is in our weekly guide.",
+    "c": "venue"
+  },
+  {
+    "t": "San Diego Safari Park",
+    "u": "/venues/san-diego-safari-park.html",
+    "d": "San Diego Safari Park is a zoo in Escondido. Editorial coverage of this spot is in our weekly guide.",
+    "c": "venue"
+  },
+  {
+    "t": "San Diego Zoo",
+    "u": "/venues/san-diego-zoo.html",
+    "d": "The San Diego Zoo in Balboa Park remains one of the finest zoos on earth, and that distinction is hard-earned: 100 acres of naturalistic habitats, over 12,",
+    "c": "venue"
+  },
+  {
+    "t": "Scripps Institution of Oceanography",
+    "u": "/venues/scripps-institution-of-oceanography.html",
+    "d": "The aquarium is connected to the Scripps Institution of Oceanography and has an educational depth that better-marketed competitors lack. Admission is reaso",
+    "c": "venue"
+  },
+  {
+    "t": "Spreckels Organ Pavilion",
+    "u": "/venues/spreckels-organ-pavilion.html",
+    "d": "The Spreckels Organ Pavilion in Balboa Park hosts free public concerts every Sunday afternoon from 2-3pm year-round, making it one of the most consistent f",
+    "c": "venue"
+  },
+  {
+    "t": "Sunset Cliffs Natural Park",
+    "u": "/venues/sunset-cliffs-natural-park.html",
+    "d": "Sunset Cliffs Natural Park in Ocean Beach is a 68-acre coastal park where the land drops vertically to the Pacific — no entry fee, no facilities, just one",
+    "c": "venue"
+  },
+  {
+    "t": "Torrey Pines Gliderport",
+    "u": "/venues/torrey-pines-gliderport.html",
+    "d": "Black&#x27;s Beach is the clothing-optional beach tucked below the Torrey Pines Gliderport cliffs, accessible via a steep trail that keeps the casual visitor ou",
+    "c": "venue"
+  },
+  {
+    "t": "Torrey Pines State Natural Reserve",
+    "u": "/venues/torrey-pines-state-natural-reserve.html",
+    "d": "Torrey Pines State Natural Reserve sits above one of San Diego&#x27;s most beautiful stretches of coastline, and the beach below the cliffs — accessed via trail",
+    "c": "venue"
+  },
+  {
+    "t": "USS Midway Museum",
+    "u": "/venues/uss-midway-museum.html",
+    "d": "USS Midway Museum is a museum in Downtown. Editorial coverage of this spot is in our weekly guide.",
+    "c": "venue"
+  },
+  {
+    "t": "Waterfront Park",
+    "u": "/venues/waterfront-park.html",
+    "d": "The dining scene is excellent and diverse. The historical Italian-American character is still present in a handful of old-school restaurants, but it shares",
+    "c": "venue"
+  },
+  {
+    "t": "William Heath Davis House",
+    "u": "/venues/william-heath-davis-house.html",
+    "d": "The Gaslamp Quarter&#x27;s Victorian commercial architecture is one of San Diego&#x27;s genuine historical assets, and walking the district requires no admission. Th",
+    "c": "venue"
+  }
+]
