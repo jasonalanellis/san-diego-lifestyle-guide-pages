@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="alternate" type="application/rss+xml" title="San Diego Lifestyle Guide RSS" href="https://sandiegolifestyleguide.com/feed.xml">
+  <link rel="alternate" type="application/json" title="San Diego Lifestyle Guide JSON Feed" href="https://sandiegolifestyleguide.com/feed.json">
+  <title>San Diego Vacation Rental &amp; Airbnb Host Guide (2026) | San Diego Lifestyle Guide</title>
+  <meta name="description" content="San Diego Airbnb and vacation rental hosting guide — permits, turnover best practices, neighborhood rules, and what experienced hosts actually do.">
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-06-10T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-10T00:00:00Z">
+  <meta property="article:author" content="https://sandiegolifestyleguide.com/authors/jason-ellis.html">
+
+  <meta property="og:title" content="San Diego Vacation Rental &amp; Airbnb Host Guide (2026)">
+  <meta property="og:description" content="San Diego Airbnb and vacation rental hosting guide — permits, turnover best practices, neighborhood rules, and what experienced hosts actually do.">
+  <meta property="og:site_name" content="San Diego Lifestyle Guide">
+  <meta property="og:url" content="https://sandiegolifestyleguide.com/san-diego-vacation-rental-guide.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="San Diego Vacation Rental &amp; Airbnb Host Guide (2026)">
+  <meta name="twitter:description" content="San Diego Airbnb and vacation rental hosting guide — permits, turnover best practices, neighborhood rules, and what experienced hosts actually do.">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    .section-image { margin: 1.5rem -1.25rem 2rem; }
+    .section-image img { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    @media (min-width: 720px) { .section-image { margin: 2rem 0 2.5rem; border-radius: var(--radius-card, 12px); overflow: hidden; } }
+    :root {
+      --color-primary:    #0077B6;
+      --color-primary-700: #005A8A;
+      --color-primary-50:  #E6F4FB;
+      --color-secondary:  #FF6B35;
+      --color-secondary-700: #D14E1F;
+      --color-accent:     #00B4D8;
+      --color-accent-50:  #E0F7FC;
+      --color-paper:      #FAFAFA;
+      --color-ink:        #0A1929;
+      --color-surface:    #FFFFFF;
+      --color-text:       #1A1A1A;
+      --color-text-muted: #6B7280;
+      --color-border:     #E5E7EB;
+      --color-editor-pick-bg: #FFF4E6;
+      --font-heading:     'Montserrat', sans-serif;
+      --font-body:        'Open Sans', sans-serif;
+      --font-accent:      'Playfair Display', Georgia, serif;
+      --radius-card:      12px;
+      --radius-pill:      999px;
+      --max-width-article:  720px;
+      --max-width-sidebar:  280px;
+      --max-width-home:     1180px;
+      --max-width-hero:     1600px;
+      --eyebrow-color:     var(--color-secondary);
+      --eyebrow-letter-spacing: 0.14em;
+      --hero-scrim:       linear-gradient(180deg, transparent 35%, rgba(10,42,69,0.72) 78%, rgba(10,25,41,0.92) 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--color-paper);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--color-primary); }
+    a:hover { color: var(--color-primary-700); }
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: var(--color-secondary); z-index: 9999; transition: width 0.1s linear;
+    }
+    .masthead {
+      position: sticky; top: 0; z-index: 900;
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.8rem 1.5rem;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--color-ink); }
+    .logo-img { height: 32px; width: auto; }
+    .brand-name { font-family: var(--font-accent); font-weight: 700; font-size: 1.05rem; color: var(--color-ink); }
+    .tagline { font-size: 0.78rem; color: var(--color-text-muted); margin-left: auto; display: none; }
+    @media (min-width: 640px) { .tagline { display: block; } }
+    .header-cta { margin-left: auto; }
+    .tagline ~ .header-cta { margin-left: 0; }
+    .header-cta a {
+      background: var(--color-secondary); color: #fff; text-decoration: none;
+      font-family: var(--font-heading); font-weight: 600; font-size: 0.78rem;
+      padding: 0.4rem 0.85rem; border-radius: var(--radius-pill); letter-spacing: 0.04em;
+    }
+    .meta-strip {
+      max-width: var(--max-width-article);
+      margin: 1.5rem auto 0;
+      padding: 0 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      color: var(--color-text-muted);
+      display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+    }
+    .meta-strip .meta-eyebrow { color: var(--eyebrow-color); }
+    .meta-strip .dot { color: var(--color-border); }
+    .toc-chipbar {
+      position: sticky; top: 57px; z-index: 800;
+      display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.55rem 1.25rem;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--color-border);
+      scrollbar-width: none;
+    }
+    .toc-chipbar::-webkit-scrollbar { display: none; }
+    .toc-chip {
+      flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.35rem;
+      font-family: var(--font-heading); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--color-text-muted); text-decoration: none;
+      background: var(--color-primary-50); border-radius: var(--radius-pill);
+      padding: 0.3rem 0.75rem;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc-chip.active, .toc-chip:hover { background: var(--color-primary); color: #fff; }
+    .toc-chip-num { font-size: 0.65rem; opacity: 0.6; }
+    .page-wrapper {
+      max-width: var(--max-width-article);
+      margin: 2rem auto 4rem;
+      padding: 0 1.25rem;
+    }
+    .article-content h1 {
+      font-family: var(--font-accent); font-size: 2.4rem; font-weight: 700;
+      line-height: 1.15; color: var(--color-ink); margin-bottom: 1rem;
+    }
+    .article-intro {
+      font-size: 1.125rem; line-height: 1.75;
+      color: var(--color-text); margin-bottom: 1.5rem;
+    }
+    .article-content > p:first-of-type::first-letter {
+      font-family: var(--font-accent); font-size: 3.8rem; font-weight: 700;
+      float: left; line-height: 0.82; padding: 0.3rem 0.55rem 0 0;
+      color: var(--color-primary);
+    }
+    .article-content h2 {
+      font-family: var(--font-accent); font-size: 1.65rem; font-weight: 700;
+      color: var(--color-ink); margin-top: 3rem; margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+    .article-content h3 {
+      display: grid;
+      grid-template-columns: 4rem 1fr;
+      column-gap: 1rem;
+      align-items: start;
+      font-family: var(--font-accent);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-top: 2.75rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.25;
+      counter-increment: h3-counter;
+    }
+    .article-content h3::before {
+      content: counter(h3-counter, decimal-leading-zero);
+      font-family: var(--font-accent);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color-primary-50);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .article-content { counter-reset: h3-counter; }
+    .article-content h3 > * { grid-column: 2; }
+    @media (max-width: 480px) {
+      .article-content h3 { padding-left: 0; }
+    }
+    .article-content p { margin-bottom: 1.1rem; }
+    .article-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: 2rem 0;
+    }
+    .article-content ul, .article-content ol {
+      padding-left: 1.5rem; margin-bottom: 1.1rem;
+    }
+    .article-content li { margin-bottom: 0.35rem; }
+    .article-content strong { font-weight: 600; }
+    .answer-capsule {
+      background: var(--color-primary-50);
+      border-left: 4px solid var(--color-primary);
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      padding: 1.1rem 1.3rem;
+      margin: 1.75rem 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .answer-capsule .capsule-q {
+      font-family: var(--font-heading); font-weight: 700; font-size: 0.78rem;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary);
+      margin-bottom: 0.4rem;
+    }
+    .pull-quote, .article-content blockquote {
+      font-family: var(--font-accent); font-size: 1.4rem; font-style: italic;
+      color: var(--color-ink); line-height: 1.4;
+      border-left: 4px solid var(--color-secondary);
+      padding: 1.2rem 1.5rem; margin: 2.5rem 0;
+      background: var(--color-editor-pick-bg);
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+    }
+    .local-rec {
+      background: var(--color-primary); color: #fff;
+      padding: 2.5rem 2rem; margin: 4rem 0 2rem;
+      border-radius: var(--radius-card);
+      text-align: center;
+    }
+    .lr-label {
+      font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.7); margin-bottom: 0.5rem;
+    }
+    .lr-quote {
+      font-family: var(--font-accent); font-size: 1.35rem; font-weight: 700;
+      color: #fff; margin-bottom: 1.25rem; line-height: 1.3;
+    }
+    .lr-link {
+      display: inline-block; background: var(--color-secondary); color: #fff;
+      text-decoration: none; font-family: var(--font-heading); font-weight: 700;
+      font-size: 0.85rem; padding: 0.65rem 1.4rem; border-radius: var(--radius-pill);
+      letter-spacing: 0.04em; transition: background 0.15s;
+    }
+    .lr-link:hover { background: var(--color-secondary-700); }
+    .site-footer {
+      background: var(--color-primary);
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 1.5rem 2rem;
+      margin-top: 5rem;
+      font-size: 0.88rem;
+    }
+    .site-footer .footer-inner {
+      max-width: var(--max-width-home);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    @media (min-width: 720px) {
+      .site-footer .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    .site-footer .footer-brand {
+      font-family: var(--font-accent); font-weight: 700; font-size: 1.15rem;
+      color: #FFFFFF; margin-bottom: 0.5rem;
+    }
+    .site-footer a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+    .site-footer a:hover { border-bottom-color: var(--color-secondary); }
+    .site-footer .newsletter-block { font-size: 0.92rem; }
+    .site-footer .newsletter-block strong { color: #fff; font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+    @media (max-width: 600px) {
+      html { font-size: 17px; }
+      body { line-height: 1.65; }
+      .page-wrapper { padding: 1.25rem 1rem 2rem; max-width: 100%; }
+      .masthead { padding: 0.65rem 1rem; }
+      .brand-name { font-size: 1rem; }
+      .toc-chipbar { top: 56px; padding: 0.4rem 0.75rem; }
+      .article-content > p:first-of-type::first-letter { font-size: 3.3rem; padding: 0.3rem 0.5rem 0 0; }
+      .article-content h2 { font-size: 1.35rem; margin-top: 2.25rem; }
+      .article-content h3 {
+        grid-template-columns: 3rem 1fr;
+        column-gap: 0.9rem;
+        font-size: 1.2rem;
+        margin-top: 2.25rem;
+      }
+      .article-content h3::before { font-size: 2.5rem; }
+    }
+    @media print {
+      .scroll-progress, .masthead, .toc-chipbar, .local-rec, .site-footer { display: none; }
+    }
+  </style>
+<!-- BEGIN seo_inject -->
+<link rel="canonical" href="https://sandiegolifestyleguide.com/san-diego-vacation-rental-guide.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://sandiegolifestyleguide.com/#org",
+      "name": "San Diego Lifestyle Guide",
+      "url": "https://sandiegolifestyleguide.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sandiegolifestyleguide.com/assets/logo-primary.png",
+        "width": 600,
+        "height": 200
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/sandiegolifestyleguide/",
+        "https://twitter.com/sdlifestyleguide",
+        "https://www.facebook.com/SanDiegoLifestyleGuide"
+      ],
+      "founder": {
+        "@id": "https://sandiegolifestyleguide.com/authors/jason-ellis.html#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sandiegolifestyleguide.com/authors/jason-ellis.html#person",
+      "name": "Jason Ellis",
+      "jobTitle": "Founder & Editor-in-Chief",
+      "url": "https://sandiegolifestyleguide.com/authors/jason-ellis.html",
+      "description": "Jason Ellis is a long-time San Diego resident, the founder of San Diego Lifestyle Guide, and a working operator in the local services economy. He writes about the city through the lens of someone who actually lives here.",
+      "image": "https://sandiegolifestyleguide.com/authors/jason-ellis.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/jasonalanellis/",
+        "https://twitter.com/sdlifestyleguide"
+      ],
+      "worksFor": {
+        "@id": "https://sandiegolifestyleguide.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sandiegolifestyleguide.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "San Diego Vacation Rental & Airbnb Host Guide (2026)",
+          "item": "https://sandiegolifestyleguide.com/san-diego-vacation-rental-guide.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://sandiegolifestyleguide.com/san-diego-vacation-rental-guide.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://sandiegolifestyleguide.com/san-diego-vacation-rental-guide.html"
+      },
+      "headline": "San Diego Vacation Rental & Airbnb Host Guide (2026)",
+      "description": "San Diego Airbnb and vacation rental hosting guide — permits, turnover best practices, neighborhood rules, and what experienced hosts actually do.",
+      "datePublished": "2026-06-10T00:00:00Z",
+      "dateModified": "2026-06-10T00:00:00Z",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://sandiegolifestyleguide.com/authors/jason-ellis.html#person"
+      },
+      "publisher": {
+        "@id": "https://sandiegolifestyleguide.com/#org"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".article-intro"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a permit to list my home on Airbnb in San Diego?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. San Diego requires a Short-Term Residential Occupancy (STRO) license for any rental under 30 days. The license type depends on whether the property is owner-occupied and how many nights per year it will be rented. Applications are processed through the City of San Diego Development Services Department."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should a San Diego vacation rental be deep cleaned?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most experienced hosts schedule a professional deep clean every 4–6 weeks, with a standard turnover clean between every guest stay. San Diego's coastal salt air and high guest-volume seasons (summer, spring break, Comic-Con) accelerate buildup on surfaces, windows, and upholstered items."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an Airbnb turnover cleaning typically cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A turnover clean covers all surfaces, kitchen appliances inside and out, bathrooms, linen changes, restocking consumables, and a final walkthrough check. Hosts often include a separate deep clean protocol for upholstery and HVAC filters monthly. Some professional services offer dedicated Airbnb turnover packages with photo documentation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which San Diego neighborhoods have the most Airbnb activity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pacific Beach and Mission Beach historically lead in vacation rental density, followed by Ocean Beach, La Jolla, Little Italy, and the Gaslamp Quarter. Coastal neighborhoods see the highest summer occupancy, while downtown properties benefit from convention and event traffic year-round."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- END seo_inject -->
+<!-- BEGIN geo_meta -->
+  <meta name="geo.region" content="US-CA">
+  <meta name="geo.placename" content="San Diego">
+  <meta name="geo.position" content="32.7157;-117.1611">
+  <meta name="ICBM" content="32.7157, -117.1611">
+<!-- END geo_meta -->
+</head>
+
+<body class="is-article">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <a href="/" class="logo-wrap" aria-label="San Diego Lifestyle Guide home">
+      <img src="/assets/logo-primary.png" alt="San Diego Lifestyle Guide logo" class="logo-img" width="120" height="38" loading="lazy" decoding="async">
+      <span class="brand-name">San Diego Lifestyle Guide</span>
+    </a>
+    <span class="tagline">Your insider guide to San Diego</span>
+    <div class="header-cta">
+      <a href="https://sandiegolifestyleguide.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
+    </div>
+  </header>
+
+  <div class="meta-strip" role="contentinfo">
+    <span class="meta-eyebrow">City Life</span><span class="dot">·</span>
+    <span>2026-06-10</span>
+    <span class="dot">·</span><span>9 min read</span>
+  </div>
+
+  <nav class="toc-chipbar" id="toc-chipbar" aria-label="Article sections"></nav>
+
+  <main>
+    <div class="page-wrapper">
+      <article class="article-content">
+        <h1>San Diego Vacation Rental &amp; Airbnb Host Guide (2026)</h1>
+
+        <p class="article-intro">San Diego is one of the most active short-term rental markets in the country — and one of the most regulated. Whether you're a first-time host thinking about listing a spare room or an experienced operator managing multiple properties across the coast, the rules have changed significantly in recent years, and the operational standard guests expect has risen with them.</p>
+
+        <div class="answer-capsule">
+          <div class="capsule-q">Quick answer: what do I need to host on Airbnb in San Diego?</div>
+          San Diego requires a Short-Term Residential Occupancy (STRO) license before you list. The license type depends on owner-occupancy status and annual nights hosted. Apply through the <a href="https://www.sandiego.gov/development-services/permits/short-term-residential-occupancy" target="_blank" rel="noopener external">City of San Diego Development Services Department</a>. Beyond the permit: reliable insurance (your homeowner's policy likely excludes short-term rental activity), a professional turnover operation, and a cleaning protocol that handles coastal conditions.
+        </div>
+
+        <p>San Diego's short-term rental market sits at the intersection of some of the country's best weather and some of its more carefully drafted local ordinances. The city passed a formal STRO licensing framework in 2021 after years of debate, and enforcement has increased steadily since. Understanding what's required — and what separates a 4.9-star listing from a 3-star listing — is the real work of hosting here.</p>
+
+        <hr>
+        <h2>The Regulatory Framework You Need to Know</h2>
+
+        <h3>STRO License Types and Limits</h3>
+        <p>San Diego's Short-Term Residential Occupancy ordinance creates four license tiers, and your tier determines how many nights per year you can host:</p>
+        <ul>
+          <li><strong>Tier 1 — Home-sharing (owner-occupied):</strong> Up to 20 nights per year in a non-primary residence, or unlimited nights in your primary residence while you are present.</li>
+          <li><strong>Tier 2 — Primary residence (owner-absent):</strong> Unlimited nights at your primary residence when you're away, with a cap of one license per person.</li>
+          <li><strong>Tier 3 — Non-primary residence:</strong> Unlimited nights at a property that is not your primary residence, subject to citywide caps and a waitlist system.</li>
+          <li><strong>Tier 4 — Mission Beach:</strong> Properties in the Mission Beach Community Planning Area are governed by a separate cap and lottery system due to the historically dense concentration of vacation rentals there.</li>
+        </ul>
+        <p>The full ordinance text and current waitlist status are maintained by the <a href="https://www.sandiego.gov/development-services/permits/short-term-residential-occupancy" target="_blank" rel="noopener external">City of San Diego</a>. Tier 3 caps in particular shift — check the current numbers before applying.</p>
+
+        <h3>Transient Occupancy Tax</h3>
+        <p>All short-term rentals in San Diego are subject to Transient Occupancy Tax (TOT) — currently 10.5% of gross rental revenue. Platforms like Airbnb and Vrbo collect and remit TOT automatically for stays booked through their systems, but hosts renting through direct channels are responsible for their own remittance. The <a href="https://www.sandiego.gov/treasurer/taxcollection/tottax" target="_blank" rel="noopener external">City Treasurer's Office</a> handles TOT registration and remittance.</p>
+
+        <h3>HOA and Lease Restrictions</h3>
+        <p>A city license doesn't override your HOA's rules. Many San Diego condo associations — particularly in the Gaslamp, East Village, and Mission Hills — have amended their CC&Rs to restrict short-term rentals entirely. Review your governing documents before applying for a license. Similarly, if you're renting your unit, your lease almost certainly prohibits subletting; short-term rental platforms treat this as subletting.</p>
+
+        <hr>
+        <h2>The Operational Standard Guests Actually Expect</h2>
+
+        <h3>Turnover Cleaning That Holds Up at Coastal Properties</h3>
+        <p>This is where most San Diego hosts underinvest. The coastal environment is genuinely demanding: salt air leaves a film on windows and metal fixtures, humidity accelerates mold risk in bathrooms, and the volume of guests during peak season (summer, spring break, Comic-Con week) compresses turnaround windows severely.</p>
+
+        <p>A turnover clean covers linen changes, all contact surfaces, kitchen appliances inside and out, bathrooms, and a final walkthrough. But the property-level protocol matters. For Airbnb properties specifically, <a href="https://bravomaids.com/services/airbnb-cleaning" target="_blank" rel="noopener">Bravo Maids offers a dedicated Airbnb turnover service</a> designed for San Diego's coastal conditions — their 275°F steam protocol addresses the salt residue and humidity buildup that accumulates between guest stays and is difficult to clear with surface wipe-downs alone. Most experienced hosts schedule a separate periodic deep clean every 4–6 weeks on top of regular turnovers.</p>
+
+        <p>The <a href="https://www.airbnb.com/help/article/1316" target="_blank" rel="noopener external">Airbnb Enhanced Clean program</a> sets minimum cleaning standards for listed properties. San Diego hosts in higher-occupancy tiers tend to exceed those standards: the guest review pattern is unforgiving on cleanliness, and a single negative review citing cleaning quality can suppress booking velocity for weeks.</p>
+
+        <h3>Pricing Strategy for San Diego's Seasonal Swings</h3>
+        <p>San Diego's short-term rental market has pronounced seasonality. July and August are peak, with occupancy rates for coastal properties running well above the national average. Shoulder season (September–November, March–May) still performs well for newer hosts. The winter dip is real but mild compared to non-coastal markets — San Diego's weather sustains demand even in December and January.</p>
+
+        <p>Dynamic pricing tools (PriceLabs, Wheelhouse, AirDNA rate estimates) are the standard for operators managing more than one or two listings. Manual pricing leaves material revenue on the table during peak weeks. The <a href="https://www.sandiegocounty.gov/content/sdc/sdc/tourism.html" target="_blank" rel="noopener external">San Diego Tourism Authority</a> publishes quarterly hotel occupancy data that serves as a useful baseline for calibrating your own rates against broader market conditions.</p>
+
+        <h3>Guest Communication and House Manual</h3>
+        <p>San Diego hosts with consistently high ratings tend to over-communicate on three things: parking (genuinely complicated in neighborhoods like Pacific Beach and Little Italy), beach/ocean access logistics, and noise rules. The city's noise ordinance applies to short-term rentals, and neighbor complaints can jeopardize your license renewal.</p>
+
+        <p>A well-structured digital house manual — covering WiFi, parking, trash schedules, nearest grocery, beach gear storage, and emergency contacts — reduces guest friction and repeat questions. Keep the practical section concise and the neighborhood guide rich: guests book San Diego to experience the city, not just the property.</p>
+
+        <hr>
+        <h2>Neighborhood-by-Neighborhood Context</h2>
+
+        <h3>Pacific Beach and Mission Beach</h3>
+        <p>The highest vacation rental density in the city. Guest expectations skew toward beach proximity, walkability to bars and restaurants, and outdoor showers or rinse stations. Properties here see the most wear during summer — a rigorous cleaning protocol is not optional. Pacific Beach's alley system complicates parking communication for guests unfamiliar with the neighborhood.</p>
+
+        <h3>La Jolla</h3>
+        <p>Higher-end guest demographic, longer average stays, higher rate tolerance. The STRO tier cap system affects La Jolla significantly given the number of non-primary vacation properties here. Presentation quality matters more in La Jolla than anywhere else in the city — guests paying a premium for a Windansea or La Jolla Shores property will notice every detail.</p>
+
+        <h3>Little Italy and the Gaslamp</h3>
+        <p>Convention and event traffic drives occupancy spikes outside summer. Comic-Con (July), Thanksgiving/Holiday weekends, and the Padres' home schedule all produce demand surges. These neighborhoods benefit from proximity to the convention center and walkable dining, but HOA restrictions are more common here than in coastal neighborhoods.</p>
+
+        <h3>North Park, South Park, and Mission Hills</h3>
+        <p>Growing markets for travelers who want a more residential San Diego experience. Demand is more evenly distributed across the year here than at the beach. Properties tend to attract longer-stay remote workers and visitors with local ties rather than pure vacation travelers.</p>
+
+        <hr>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Do I need a permit to list my home on Airbnb in San Diego?</h3>
+        <p>Yes. A Short-Term Residential Occupancy (STRO) license is required before listing. The license type depends on owner-occupancy status and the number of nights per year you plan to host. Applications go through the City of San Diego Development Services Department. Operating without a license exposes you to fines and potential platform delisting.</p>
+
+        <h3>How often should a San Diego vacation rental be deep cleaned?</h3>
+        <p>Most experienced hosts schedule a professional deep clean every 4–6 weeks, with a turnover clean between every guest stay. San Diego's coastal salt air and high-volume peak seasons accelerate buildup on surfaces, windows, and upholstered items that a standard turnover won't fully address.</p>
+
+        <h3>What does an Airbnb turnover cleaning typically cover?</h3>
+        <p>A turnover clean covers all surfaces, kitchen appliances inside and out, bathrooms, linen changes, restocking consumables, and a final walkthrough check. Professional services handling Airbnb turnovers often include photo documentation and a host-facing checklist so you have a record of unit condition at each changeover.</p>
+
+        <h3>Which San Diego neighborhoods have the most Airbnb activity?</h3>
+        <p>Pacific Beach and Mission Beach historically lead in vacation rental density, followed by Ocean Beach, La Jolla, Little Italy, and the Gaslamp Quarter. Coastal neighborhoods see the highest summer occupancy, while downtown properties benefit from convention and event traffic year-round.</p>
+
+        <hr>
+        <p><em>This guide was last updated in June 2026. Permit requirements and TOT rates are set by the City of San Diego and subject to change — confirm current requirements at <a href="https://www.sandiego.gov" target="_blank" rel="noopener external">sandiego.gov</a> before applying.</em></p>
+      </article>
+
+      <blockquote class="pull-quote">San Diego's short-term rental rules have matured — hosts who understand the permit framework and run a tight operational standard consistently outperform those who wing it.</blockquote>
+<!-- BEGIN internal_links -->
+<style>
+  .related-section { max-width: 1080px; margin: 4rem auto 2rem; padding: 0 1.25rem; }
+  .related-eyebrow { font-family: Montserrat, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.18em; color: #777; margin-bottom: 0.5rem; }
+  .related-heading { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.85rem; line-height: 1.15; margin-bottom: 1.75rem; }
+  .related-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width: 720px) { .related-grid { grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; } }
+  .related-card { display: block; background: #fff; border-radius: var(--radius-card, 12px); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: transform 0.18s, box-shadow 0.18s; }
+  .related-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+  .related-card-img { width: 100%; aspect-ratio: 16/10; background: #1E3A5F; overflow: hidden; }
+  .related-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .related-card-img-empty { background: linear-gradient(135deg, #0077B6 0%, #00B4D8 100%); }
+  .related-card-body { padding: 1.1rem 1.2rem 1.35rem; }
+  .related-card-title { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.1rem; line-height: 1.25; margin-bottom: 0.5rem; }
+  .related-card-snippet { font-family: "Open Sans", sans-serif; font-size: 0.88rem; line-height: 1.5; color: #666; }
+</style>
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="related-eyebrow">Related Reading</div>
+  <h2 class="related-heading" id="related-heading">More from the guide</h2>
+  <div class="related-grid">
+<a class="related-card" href="/best-house-cleaning-san-diego.html"><div class="related-card-img related-card-img-empty"></div><div class="related-card-body"><h3 class="related-card-title">Best House Cleaning Services in San Diego (2025)</h3><p class="related-card-snippet">San Diego's year-round sunshine is great for outdoor living, but coastal salt air and dry-season dust mean homes need professional care. Here are the top picks…</p></div></a>
+<a class="related-card" href="/best-neighborhoods-san-diego.html"><div class="related-card-img related-card-img-empty"></div><div class="related-card-body"><h3 class="related-card-title">Best Neighborhoods in San Diego (2025)</h3><p class="related-card-snippet">San Diego is less a single city than a collection of distinct neighborhoods — each with its own character, dining scene, and sense of place.</p></div></a>
+<a class="related-card" href="/best-move-out-cleaning-san-diego.html"><div class="related-card-img related-card-img-empty"></div><div class="related-card-body"><h3 class="related-card-title">Best Move-Out Cleaning Services in San Diego</h3><p class="related-card-snippet">Moving out in San Diego? A professional clean is one of the strongest defenses against deposit deductions. Here are the top move-out services in the county.</p></div></a>
+  </div>
+</section>
+<!-- END internal_links -->
+
+        <aside class="local-rec" aria-label="Local recommendation">
+          <div class="lr-label">A Local Recommendation</div>
+          <div class="lr-quote">Airbnb turnover cleaning in San Diego — Bravo Maids</div>
+          <a class="lr-link" href="https://bravomaids.com/" target="_blank" rel="noopener sponsored">Bravo Maids →</a>
+        </aside>
+
+    </div>
+
+<section class="local-services-cta" style="max-width:var(--max-width-article,720px);margin:2.5rem auto;padding:1.5rem 1.75rem;border:1px solid var(--color-border,#ddd);border-left:4px solid var(--color-secondary,#888);border-radius:var(--radius-card,8px);background:var(--color-editor-pick-bg,#f7f7f7)">
+<p style="font-family:var(--font-heading,sans-serif);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--color-secondary);margin:0 0 .4rem">Local services</p>
+<h2 style="font-family:var(--font-accent,Georgia,serif);font-size:1.4rem;margin:0 0 .5rem;color:var(--color-ink)">Bravo Maids &mdash; Airbnb &amp; vacation rental cleaning in San Diego</h2>
+<p style="margin:0 0 1rem;color:var(--color-text)">Steam-led turnover and deep cleaning for vacation rentals across San Diego &mdash; family-owned, $2M insured, satisfaction guaranteed.</p>
+<a href="https://bravomaids.com/booking-request" rel="noopener" style="display:inline-block;background:var(--color-secondary);color:#fff;text-decoration:none;font-family:var(--font-heading,sans-serif);font-weight:600;font-size:.85rem;padding:.6rem 1.2rem;border-radius:var(--radius-pill,6px)">Get a free quote &rarr;</a>
+</section>
+</main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">San Diego Lifestyle Guide</div>
+        <div>© 2026 San Diego Lifestyle Guide. All rights reserved.</div>
+        <div style="margin-top:0.5rem">
+          <a href="mailto:sdlifestyle@proton.me">sdlifestyle@proton.me</a>
+          &nbsp;&middot;&nbsp;
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="newsletter-block">
+        <strong>The Weekly</strong><br>
+        The best of San Diego delivered every Friday morning.<br>
+        <a href="https://sandiegolifestyleguide.com/subscribe" target="_blank" rel="noopener">
+          Subscribe →
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var bar = document.querySelector('.scroll-progress');
+      var article = document.querySelector('.article-content');
+      function tick(){
+        if (!article || !bar) return;
+        var rect = article.getBoundingClientRect();
+        var total = Math.max(1, article.scrollHeight + rect.top - window.innerHeight + 200);
+        var passed = Math.max(0, -rect.top + 1);
+        var pct = Math.max(0, Math.min(100, (passed / total) * 100));
+        bar.style.width = pct + '%';
+      }
+      var chipbar = document.getElementById('toc-chipbar');
+      var headings = article ? article.querySelectorAll('h3') : [];
+      var chips = [];
+      if (chipbar && headings.length > 0) {
+        headings.forEach(function(h, i){
+          var id = 'section-' + (i+1);
+          h.id = id;
+          var rawText = (h.textContent || '').replace(/^\s*\d+\.?\s*/, '');
+          var shortText = rawText.split(/[—\-]/)[0].trim();
+          if (shortText.length > 24) shortText = shortText.slice(0, 22) + '…';
+          var a = document.createElement('a');
+          a.className = 'toc-chip';
+          a.href = '#' + id;
+          a.innerHTML = '<span class="toc-chip-num">' + String(i+1).padStart(2,'0') + '</span>' + shortText;
+          chipbar.appendChild(a);
+          chips.push({ el: a, id: id });
+        });
+      }
+      if ('IntersectionObserver' in window && chips.length > 0) {
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) {
+              var id = e.target.id;
+              chips.forEach(function(c){
+                if (c.id === id) {
+                  c.el.classList.add('active');
+                  try {
+                    var bb = chipbar.getBoundingClientRect();
+                    var cb = c.el.getBoundingClientRect();
+                    if (cb.right > bb.right || cb.left < bb.left) {
+                      chipbar.scrollTo({ left: c.el.offsetLeft - 16, behavior: 'smooth' });
+                    }
+                  } catch(_) {}
+                } else c.el.classList.remove('active');
+              });
+            }
+          });
+        }, { rootMargin: '-25% 0px -65% 0px' });
+        headings.forEach(function(h){ obs.observe(h); });
+      }
+      window.addEventListener('scroll', tick, { passive: true });
+      tick();
+    })();
+  </script>
+</body>
+</html>
