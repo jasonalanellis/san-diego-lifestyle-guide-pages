@@ -8,7 +8,7 @@
   <link rel="alternate" type="application/rss+xml" title="San Diego Lifestyle Guide RSS" href="https://sandiegolifestyleguide.com/feed.xml">
   <link rel="alternate" type="application/json" title="San Diego Lifestyle Guide JSON Feed" href="https://sandiegolifestyleguide.com/feed.json">
   <title>San Diego Lifestyle Guide — Local Guide | San Diego Lifestyle Guide</title>
-  <meta name="description" content="The best local guide for San Diego.">
+  <meta name="description" content="San Diego Lifestyle Guide covers neighborhoods, dining, and outdoor life across the city — La Jolla to Little Italy to Pacific Beach.">
   <link rel="canonical" href="https://sandiegolifestyleguide.com/">
 
   
@@ -701,6 +701,27 @@
       "@id": "https://sandiegolifestyleguide.com/#org",
       "name": "San Diego Lifestyle Guide",
       "url": "https://sandiegolifestyleguide.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sandiegolifestyleguide.com/assets/logo-primary.png",
+        "width": 600,
+        "height": 200
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/sandiegolifestyleguide/",
+        "https://twitter.com/sdlifestyleguide",
+        "https://www.facebook.com/SanDiegoLifestyleGuide"
+      ],
+      "knowsAbout": [
+        "San Diego neighborhoods",
+        "San Diego dining",
+        "La Jolla",
+        "Pacific Beach",
+        "San Diego outdoor activities",
+        "Little Italy San Diego",
+        "San Diego local life",
+        "San Diego events"
+      ],
       "founder": {
         "@id": "https://sandiegolifestyleguide.com/authors/jason-ellis.html#person"
       },
@@ -717,11 +738,20 @@
       "publisher": {
         "@id": "https://sandiegolifestyleguide.com/#org"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://sandiegolifestyleguide.com/search.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
 }
 </script>
+<!-- TODO (operator): Add Wikidata Q-ID to sameAs array above once created (plan.md §2 O7) -->
 </head>
 
 <body class="is-index">
